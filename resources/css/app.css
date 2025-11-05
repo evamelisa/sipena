@@ -1,0 +1,5 @@
+@import "tailwindcss/preflight"; /* Menggantikan @tailwind base */
+
+/* @tailwind components sudah dihapus/digabung */
+
+@tailwind utilities; /* Untuk memuat semua kelas utilitas Tailwind */
