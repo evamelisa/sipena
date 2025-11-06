@@ -166,7 +166,7 @@
 
 <main>
   <p>
-    <strong>Selamat SAMSAT!</strong><br />
+    <strong>Sejarah SAMSAT!</strong><br />
     SAMSAT Tanjungpinang merupakan UPT (Unit Pelaksana Teknis) yang berada di bawah Dinas Pendapatan Daerah Provinsi Kepulauan Riau, tepatnya di Kota Tanjungpinang, dengan fungsi utama sebagai pelaksana urusan bidang pendapatan daerah dari sektor Pajak Kendaraan Bermotor (PKB) dan Pajak Bahan Bakar Kendaraan Bermotor (PBBKB) dan Bea Balik Nama Kendaraan Bermotor (BBNKB).
   </p>
   <p>
