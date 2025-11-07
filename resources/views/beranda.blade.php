@@ -158,22 +158,19 @@
 </header>
 
 <nav>
-  <a href="#">Beranda</a>
-  <a href="#">Profil</a>
-  <a href="#">Layanan</a>
-  <a href="#">Link</a>
+  <a href="/beranda">Beranda</a>
+  <a href="/profil">Profil</a>
+  <a href="/layanan">Layanan</a>
+  <a href="/lainnya">Lainnya</a>
 </nav>
 
 <main>
   <p>
     <strong>Sejarah SAMSAT!</strong><br />
-    SAMSAT Tanjungpinang merupakan UPT (Unit Pelaksana Teknis) yang berada di bawah Dinas Pendapatan Daerah Provinsi Kepulauan Riau, tepatnya di Kota Tanjungpinang, dengan fungsi utama sebagai pelaksana urusan bidang pendapatan daerah dari sektor Pajak Kendaraan Bermotor (PKB) dan Pajak Bahan Bakar Kendaraan Bermotor (PBBKB) dan Bea Balik Nama Kendaraan Bermotor (BBNKB).
+    SAMSAT Tanjungpinang diresmikan pada tanggal 15 April 1982 yang merupakan SAMSAT Pemerintah Tk.I Provinsi Riau sebelum terbentuknya Provinsi Kepulauan Riau. Sejak tahun 2005 diambil alih Kantor Unit Pelayanan Teknis Tanjungpinang yang selanjutnya terjadi perubahan nama menjadi Unit Pelaksana Teknis (UPT) SAMSAT Tanjungpinang terdiri atas 3 (tiga) instansi yaitu Kepolisian Resor Kota Tanjungpinang, Dinas Pendapatan Daerah Propinsi Kepulauan Riau serta Jasa Raharja.
   </p>
   <p>
-    SAMSAT Tanjungpinang juga secara koordinator koordinasi dengan POLDA KEPRI dalam pelayanan penerbitan STNK, BPKB maupun Pelayanan Pajak Daerah lainnya.
-  </p>
-  <p>
-    Dengan sistem pelayanan yang terintegrasi, memudahkan masyarakat dalam melakukan pembayaran pajak secara cepat, aman dan terpercaya.
+    Tujuan dibentuknya SAMSAT Tanjungpinang adalah untuk meningkatkan pelayanan dalam penerbitan STNK, TNKB dan Pemungutan PKB, BBN-KB serta SWDKLLJ, Kantor ini terletak diatas tanah seluas ± 5000 . Kantor tersebut berada diwilayah Kota Tanjungpinang pada Jl. Basuki Rahmat No.10 Km.4 Kota Tanjungpinang.
   </p>
 </main>
 
