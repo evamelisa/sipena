@@ -1,0 +1,329 @@
+/* css halaman beranda */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  header {
+    background-color: #002a5c;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+  header .logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  header .logos img {
+    height: 50px;
+    width: auto;
+  }
+  nav {
+    background-color: #00387a;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    font-weight: bold;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffcc00;
+  }
+  main {
+    background-color: #00387a;
+    margin: 2rem auto;
+    max-width: 960px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    line-height: 1.4;
+    font-size: 0.9rem;
+  }
+  main p {
+    margin: 0.8rem 0;
+    text-align: justify;
+  }
+  .services {
+    max-width: 960px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 2rem;
+    color: white;
+  }
+  .services .left, .services .right {
+    background-color: #002a5c;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  .services h3 {
+    text-align:center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .quote-section {
+    background-color: #002a5c;
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+  }
+  .icons-section {
+    max-width: 960px;
+    margin: 2rem auto 4rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .icon-box {
+    background-color: #00387a;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    width: 120px;
+    text-align: center;
+  }
+  .icon-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+  .icon-box p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  footer {
+    max-width: 960px;
+    margin: 0 auto 2rem auto;
+    padding: 0 2rem;
+    font-size: 0.75rem;
+    color: #444;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+  }
+  footer div {
+    padding: 0.5rem 0;
+  }
+  @media (max-width: 700px) {
+    .services {
+      flex-direction: column;
+    }
+    .icons-section {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    footer {
+      flex-direction: column;
+      font-size: 0.7rem;
+    }
+  }
+
+/* css halaman profil */
+
+/* css halaman layanan */
+
+/* Reset dan dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem 0 4rem 0;
+    background: #fff;
+    color: #000;
+  }
+  
+  /* ================================
+     NAVBAR
+     ================================ */
+  nav.navbar {
+    display: inline-flex;
+    background-color: #0b1a5f;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    user-select: none;
+    box-shadow: 0 6px 10px rgba(11, 26, 95, 0.6);
+    margin: 0 auto 3rem auto;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Navbar link umum */
+  nav.navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0;
+    color: #c1c1c1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 0 0 20px 20px;
+    transition: color 0.3s ease;
+  }
+  
+  nav.navbar a:hover:not(.layanan-active) {
+    color: #f0c600;
+  }
+  
+  /* Navbar aktif */
+  nav.navbar a.layanan-active {
+    background: white;
+    color: #0b1a5f;
+    font-weight: 700;
+    box-shadow: 0 2px 12px rgba(11, 26, 95, 0.7);
+    cursor: default;
+  }
+  
+  /* ================================
+     LAYANAN (grid box)
+     ================================ */
+  .layanan-container {
+    max-width: 600px;
+    margin: 0 auto 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    user-select: none;
+  }
+  
+  /* Tombol layanan */
+  .layanan-button {
+    background-color: #0b1a5f;
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .layanan-button:hover {
+    background-color: #152f9f;
+  }
+  
+  /* ================================
+     INFO BOX (footer)
+     ================================ */
+  .info-box {
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+    user-select: text;
+    position: relative;
+    min-height: 100px;
+  }
+  
+  /* Kolom kiri dan kanan */
+  .info-left,
+  .info-right {
+    flex: 1;
+  }
+  
+  .info-left p,
+  .info-right p {
+    margin: 0.2rem 0;
+  }
+  
+  .info-left strong,
+  .info-right strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  /* Ikon */
+  .icon-phone::before {
+    content: "📞 ";
+    color: #0b1a5f;
+  }
+  
+  .icon-email::before {
+    content: "✉️ ";
+    color: #0b1a5f;
+  }
+  
+  /* Dekorasi sudut */
+  .corner-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-top-right-radius: 20px;
+  }
+  
+  .corner-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+  }
+  
+  /* ================================
+     RESPONSIVE
+     ================================ */
+  @media (max-width: 700px) {
+    nav.navbar {
+      width: 90vw;
+    }
+  
+    .layanan-container {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 90vw;
+    }
+  
+    .info-box {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 1.2rem;
+    }
+  
+    .info-left,
+    .info-right {
+      flex: none;
+    }
+  
+    .corner-top-right,
+    .corner-bottom-left {
+      display: none;
+    }
+  }
+
+/* css halaman samsat corner*/
+    
+  
+
+/* css halaman lainnya */

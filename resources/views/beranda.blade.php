@@ -1,149 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <title>Beranda Samsat Tanjungpinang</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
-      color: white;
-    }
-    header {
-      background-color: #002a5c;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header .title {
-      font-weight: bold;
-      font-size: 1.3rem;
-      letter-spacing: 1.5px;
-    }
-    header .logos {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-    header .logos img {
-      height: 50px;
-      width: auto;
-    }
-    nav {
-      background-color: #00387a;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      font-weight: bold;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    main {
-      background-color: #00387a;
-      margin: 2rem auto;
-      max-width: 960px;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      line-height: 1.4;
-      font-size: 0.9rem;
-    }
-    main p {
-      margin: 0.8rem 0;
-      text-align: justify;
-    }
-    .services {
-      max-width: 960px;
-      margin: 2rem auto;
-      display: flex;
-      gap: 2rem;
-      color: white;
-    }
-    .services .left, .services .right {
-      background-color: #002a5c;
-      border-radius: 10px;
-      padding: 1rem;
-      flex: 1;
-      font-size: 0.9rem;
-    }
-    .services h3 {
-      text-align:center;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-    .quote-section {
-      background-color: #002a5c;
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1.5rem 2rem;
-      border-radius: 10px;
-      text-align: center;
-      font-style: italic;
-      letter-spacing: 0.5px;
-      font-size: 0.9rem;
-    }
-    .icons-section {
-      max-width: 960px;
-      margin: 2rem auto 4rem auto;
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-    }
-    .icon-box {
-      background-color: #00387a;
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      width: 120px;
-      text-align: center;
-    }
-    .icon-box img {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 0.5rem;
-    }
-    .icon-box p {
-      font-size: 0.75rem;
-      line-height: 1.2;
-    }
-    footer {
-      max-width: 960px;
-      margin: 0 auto 2rem auto;
-      padding: 0 2rem;
-      font-size: 0.75rem;
-      color: #444;
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid #ccc;
-    }
-    footer div {
-      padding: 0.5rem 0;
-    }
-    @media (max-width: 700px) {
-      .services {
-        flex-direction: column;
-      }
-      .icons-section {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      footer {
-        flex-direction: column;
-        font-size: 0.7rem;
-      }
-    }
+
   </style>
 </head>
 <body>
@@ -180,7 +44,7 @@
     <p><strong>Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari:</strong></p>
     <ol>
       <li>Pengurusan Pajak 1 Tahun</li>
-      <li>Pengurusan Pajak 5 Tahun atau Lebih</li>
+      <li>Pengurusan Pajak 5 Tahun atau Ganti STNK</li>
       <li>Registrasi Pajak</li>
       <li>Pengisian Data</li>
       <li>Gadai</li>
