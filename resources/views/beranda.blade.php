@@ -1,32 +1,35 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <title>Samsat Tanjungpinang</title>
-  <style>
-
-  </style>
+  <title>Beranda Samsat Tanjungpinang</title>
 </head>
 <body>
 
-<header>
-  <div class="title">SAMSAT TANJUNGPINANG</div>
+<!-- Navigasi -->
+  <nav class="nav-container">
+    <ul class="nav-menu">
+      <li class="active">Beranda</li>
+      <li>Profil</li>
+      <li>Layanan</li>
+      <li>Lainnya</li>
+    </ul>
+  </nav>
+
+<header class="header-main">
+  <div class="header-title">
+      SAMSAT<br />
+      TANJUNGPINANG
+    </div>
   <div class="logos">
-    <img src="https://i.ibb.co/tscFZBK/logo-korlantas.png" alt="Logo Korlantas" />
-    <img src="https://i.ibb.co/Gtrh6nj/logo-polda-kepri.png" alt="Logo Polda Kepri" />
-    <img src="https://i.ibb.co/xzJHDq7/logo-jsf.png" alt="Logo JSF" />
+    <img src="{{ asset('image/korlantas.png') }}" alt="Logo Korlantas">
+    <img src="{{ asset('image/kepri.png') }}" alt="Logo Kepri">
+    <img src="{{ asset('image/jrh.png') }}" alt="Logo JRH">
   </div>
 </header>
-
-<nav>
-  <a href="/beranda">Beranda</a>
-  <a href="/profil">Profil</a>
-  <a href="/layanan">Layanan</a>
-  <a href="/lainnya">Lainnya</a>
-</nav>
 
 <main>
   <p>
@@ -41,52 +44,50 @@
 <section class="services">
   <div class="left">
     <h3>LAYANAN LENGKAP</h3>
-    <p><strong>Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari</strong></p>
+    <p><strong>Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari:</strong></p>
     <ol>
-      <li>Pengurusan Pajak 1 Tahun</li>
-      <li>Pengurusan Pajak 5 Tahun atau Ganti STNK</li>
-      <li>Registrasi Pajak</li>
-      <li>Pengisian Data</li>
-      <li>Gadai</li>
+      <li>Perpanjangan Pajak 1 Tahun</li>
+      <li>Perpanjangan Pajak 5 Tahun atau ganti STNK</li>
+      <li>Rubentina</li>
+      <li>Balik nama</li>
+      <li>Cek Fisik</li>
       <li>Mutasi</li>
     </ol>
   </div>
   <div class="right">
     <h3>&nbsp;</h3>
-    <p><strong>Jenis Layanan</strong></p>
+    <p><strong>Jenis Layanan:</strong></p>
     <ul>
-      <li>Servis Kendaraan (Samsat)</li>
-      <li>Samsat Keliling (Samsat)</li>
-      <li>Samsat Online</li>
-      <li>Kantor Samsat</li>
+      <li>Samsat Bergerak (SAMBER)</li>
+      <li>Samsat Keliling (SAMLING)</li>
+      <li>Samsat Corner</li>
+      <li>Pelantar Emas</li>
     </ul>
   </div>
 </section>
 
-<section class="quote-section">
-  "Layanan Indahnya Badan Pendapatan Daerah sebagai Organisasi yang Profesional, Independen dan Akuntabel dalam rangka Peningkatan Pendapatan Daerah"
-</section>
-
+<div class="white-square">
 <section class="icons-section">
   <div class="icon-box">
-    <img src="https://i.ibb.co/y5mTTBQ/icon-info.png" alt="Info Pelayanan" />
-    <p>Info Pelayanan</p>
+   <img src="{{ asset('image/info.png') }}" alt="Logo Info">
+    <p>Info Pelayanan</p> 
   </div>
   <div class="icon-box">
-    <img src="https://i.ibb.co/cTqjZtX/icon-calendar.png" alt="Jadwal Pelayanan" />
+    <img src="{{ asset('image/kalender.png') }}" alt="Logo Kalender">
     <p>Jadwal Pelayanan</p>
   </div>
   <div class="icon-box">
-    <img src="https://i.ibb.co/4tSNT6Q/icon-announcement.png" alt="Informasi Pengumuman" />
+    <img src="{{ asset('image/toa.png') }}" alt="Logo Toa">
     <p>Informasi Pengumuman</p>
   </div>
 </section>
+</div>
 
 <footer>
   <div>
     <p><strong>Alamat</strong></p>
-    <p>Jl. Yos Sudarso Km. 8 Tanjungpinang</p>
-    <p>Provinsi Kepulauan Riau</p>
+    <p>JL.BASUKI RAHMAD NO.10 TANJUNGPINANG</p>
+    <p>UPTD PPD TANJUNG PINANG</p>
   </div>
   <div>
     <p><strong>Kontak</strong></p>
