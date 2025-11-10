@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <title>Beranda Samsat Tanjungpinang</title>
+  <title>Samsat Tanjungpinang</title>
   <style>
 
   </style>
@@ -41,7 +41,7 @@
 <section class="services">
   <div class="left">
     <h3>LAYANAN LENGKAP</h3>
-    <p><strong>Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari:</strong></p>
+    <p><strong>Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari</strong></p>
     <ol>
       <li>Pengurusan Pajak 1 Tahun</li>
       <li>Pengurusan Pajak 5 Tahun atau Ganti STNK</li>
@@ -53,7 +53,7 @@
   </div>
   <div class="right">
     <h3>&nbsp;</h3>
-    <p><strong>Jenis Layanan:</strong></p>
+    <p><strong>Jenis Layanan</strong></p>
     <ul>
       <li>Servis Kendaraan (Samsat)</li>
       <li>Samsat Keliling (Samsat)</li>
