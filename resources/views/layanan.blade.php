@@ -26,7 +26,7 @@
     <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.kantor-samsat') }}')">KANTOR SAMSAT</div>    
     <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.samsat-corner') }}')">SAMSAT CORNER</div>    
     <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.samsat-bergerak') }}')">SAMSAT BERGERAK</div>    
-    <div class="layanan-button" role="button" onclick="goToPage('samsat-keliling.php')">SAMSAT KELILING</div>
+    <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.samsat-keliling') }}')">SAMSAT KELILING</div>    
     <div class="layanan-button" role="button" onclick="goToPage('pelantar-emas.php')">PELANTAR EMAS</div>
     <div class="layanan-button" role="button" onclick="goToPage('jadwal-samsat.php')">JADWAL SAMSAT</div>
   </section>

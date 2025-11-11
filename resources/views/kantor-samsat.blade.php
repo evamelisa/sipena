@@ -7,11 +7,9 @@
     <title>Halaman Kantor Samsat</title>
 </head>
 <body>
-    
-<nav class="navbar" aria-label="Navigasi Layanan SAMSAT">
-    <a href="/samsat.corner.blade.php">Samsat Corner</a>
-    <a href="/kantor.samsat.blade.php">Kantor Samsat</a>
-</nav>
+
+
+<p>Halaman Kantor Samsat</p>
 
 </body>
 </html>
