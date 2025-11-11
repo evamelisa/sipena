@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
   <title>Layanan SAMSAT</title>
 
@@ -23,9 +23,9 @@
   </nav>
 
   <section class="layanan-container" aria-label="Pilihan layanan samsat">
-    <div class="layanan-button" role="button" onclick="goToPage('kantor-samsat.php')">KANTOR SAMSAT</div>
-    <div class="layanan-button" role="button" onclick="goToPage('samsat-corner.php')">SAMSAT CORNER</div>
-    <div class="layanan-button" role="button" onclick="goToPage('samsat-bergerak.php')">SAMSAT BERGERAK</div>
+    <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.kantor-samsat') }}')">KANTOR SAMSAT</div>    
+    <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.samsat-corner') }}')">SAMSAT CORNER</div>    
+    <div class="layanan-button" role="button" onclick="goToPage('{{ route('layanan.samsat-bergerak') }}')">SAMSAT BERGERAK</div>    
     <div class="layanan-button" role="button" onclick="goToPage('samsat-keliling.php')">SAMSAT KELILING</div>
     <div class="layanan-button" role="button" onclick="goToPage('pelantar-emas.php')">PELANTAR EMAS</div>
     <div class="layanan-button" role="button" onclick="goToPage('jadwal-samsat.php')">JADWAL SAMSAT</div>
