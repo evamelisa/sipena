@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+      @vite(['resources/css/app.css', 'resources/js/app.js'])
+
   <title>Beranda - SAMSAT Tanjungpinang</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -12,14 +14,13 @@
     :root{
       --deep-1:#0b2a66;
       --deep-2:#163a8a;
-      --accent:#6c7cf0;
       --bg:#f4f6fb;
       --card:#ffffff;
       --muted:#6b7a90;
     }
     *{box-sizing:border-box}
     body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-    html, body { font-size: 18px; } /* font lebih besar */
+    html, body { font-size: 15px; } /* font lebih besar */
 
     .top-banner{
       background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
@@ -50,9 +51,9 @@
       font-size:1.08rem;
       opacity:.98;
     }
-    .nav-pills-centered .nav-link.active{
-      background: rgba(255,255,255,0.18);
-      border:2px solid #fff;
+   .nav-pills-centered .nav-link.active{
+      background: rgba(255,255,255,0.12); 
+      border:2px solid #000000707505;
     }
     .logo-row{
       display:flex;
@@ -81,7 +82,7 @@
     .section-sejarah{
       background: none;
       margin:0 auto;
-      max-width:700px; /* diperlebar */
+      width:1100px; /* diperlebar */
       margin-top:-36px;
       margin-bottom:18px;
       position:relative;
@@ -221,7 +222,7 @@
   <header class="top-banner" role="banner">
     <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
       <ul class="nav mb-0">
-        <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/beranda') }}">Beranda</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
@@ -233,7 +234,6 @@
       <img src="https://i.ibb.co/Gtrh6nj/logo-polda-kepri.png" alt="Polda Kepri">
       <img src="https://i.ibb.co/xzJHDq7/logo-jsf.png" alt="JSF">
     </div>
-    <div class="motif-bg"></div>
     <div class="hero-sub">Sejarah SAMSAT</div>
   </header>
 
@@ -242,10 +242,10 @@
       <div class="sejarah-card">
         <h5>Sejarah SAMSAT</h5>
         <p>
-          SAMSAT Tanjungpinang diresmikan pada tanggal 15 April 1982 yang merupakan SAMSAT Pemerintah Tk.I Provinsi Riau sebelum terbentuknya Provinsi Kepulauan Riau. Sejak tahun 2005 diambil alih Kantor Unit Pelayanan Teknis Tanjungpinang yang selanjutnya terjadi perubahan nama menjadi Unit Pelaksana Teknis (UPT) SAMSAT Tanjungpinang terdiri atas 3 (tiga) instansi yaitu Kepolisian Resor Kota Tanjungpinang, Dinas Pendapatan Daerah Propinsi Kepulauan Riau serta Jasa Raharja.
+            SAMSAT Tanjungpinang diresmikan pada tanggal 15 April 1982 yang merupakan SAMSAT Pemerintah Tk.I Provinsi Riau sebelum terbentuknya Provinsi Kepulauan Riau. Sejak tahun 2005 diambil alih Kantor Unit Pelayanan Teknis Tanjungpinang yang selanjutnya terjadi perubahan nama menjadi Unit Pelaksana Teknis (UPT) SAMSAT Tanjungpinang terdiri atas 3 (tiga) instansi yaitu Kepolisian Resor Kota Tanjungpinang, Dinas Pendapatan Daerah Propinsi Kepulauan Riau serta Jasa Raharja.
         </p>
         <p>
-          Tujuan dibentuknya SAMSAT Tanjungpinang adalah untuk meningkatkan pelayanan dalam penerbitan STNK, TNKB dan Pemungutan PKB, BBN-KB serta SWDKLLJ. Kantor ini terletak diatas tanah seluas ± 5000 . Kantor tersebut berada diwilayah Kota Tanjungpinang pada Jl. Basuki Rahmad No.10 Km.4 Kota Tanjungpinang.
+          Tujuan dibentuknya SAMSAT Tanjungpinang adalah untuk meningkatkan pelayanan dalam penerbitan STNK, TNKB dan Pemungutan PKB, BBN-KB serta SWDKLLJ, Kantor ini terletak diatas tanah seluas ± 5000 . Kantor tersebut berada diwilayah Kota Tanjungpinang pada Jl. Basuki Rahmat No.10 Km.4 Kota Tanjungpinang.
         </p>
       </div>
     </section>
@@ -256,16 +256,15 @@
         <li class="judul">Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari :</li>
         <li>1. Perpanjangan Pajak 1 Tahun</li>
         <li>2. Perpanjangan Pajak 5 Tahun</li>
-        <li>3. Registrasi Pajak</li>
+        <li>3. Rubentina</li>
         <li>4. Balik Nama</li>
-        <li>5. BPKB</li>
-        <li>6. Cek Fisik</li>
-        <li>7. Mutasi</li>
+        <li>5. Cek Fisik</li>
+        <li>6. Mutasi</li>
       </ul>
       <ul class="layanan-list">
         <li class="jenis">Jenis Layanan :</li>
-        <li>1. Samsat Bergerak (Samber)</li>
-        <li>2. Samsat Keliling (Samkel)</li>
+        <li>1. Samsat Bergerak </li>
+        <li>2. Samsat Keliling </li>
         <li>3. Samsat Corner</li>
         <li>4. Pelantar Emas</li>
         <li>5. Jadwal Samsat</li>
