@@ -83,7 +83,7 @@
       background: none;
       margin:0 auto;
       width:1100px; /* diperlebar */
-      margin-top:-36px;
+      margin-top:48px;
       margin-bottom:18px;
       position:relative;
       z-index:2;
