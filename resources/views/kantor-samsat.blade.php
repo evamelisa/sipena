@@ -9,7 +9,7 @@
 <body>
 
 
-<p>Halaman Kantor Samsat</p>
+<p>Halaman Kantor SAMSAT</p>
 
 </body>
 </html>

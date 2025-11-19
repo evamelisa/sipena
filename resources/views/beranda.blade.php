@@ -123,23 +123,19 @@
     .top-banner{
       background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
       color:#fff;
-      padding:0 0 0 0;
-      border-bottom-left-radius:32px;
-      border-bottom-right-radius:32px;
+      padding:25px 0 50px;
+      border-bottom-left-radius:88px;
+      border-bottom-right-radius:88px;
       position:relative;
       overflow:hidden;
     }
-    .nav-pills-centered{
-      display:inline-flex;
-      gap:.35rem;
-      background: rgba(255,255,255,0.06);
-      padding:6px 10px;
-      border-radius:999px;
-      box-shadow:0 8px 26px rgba(11,42,102,0.12);
-      margin-top:18px;
-      justify-content:center;
-      width:100%;
-      font-size:1.08rem;
+    .nav-pills-centered{ 
+      display:inline-flex; 
+      gap:.35rem; 
+      background: rgba(255,255,255,0.06); 
+      padding:6px 10px; 
+      border-radius:999px; 
+      box-shadow:0 8px 26px rgba(11,42,102,0.12); 
     }
     .nav-pills-centered .nav-link{
       color:#fff;
@@ -151,7 +147,6 @@
     }
    .nav-pills-centered .nav-link.active{
       background: rgba(255,255,255,0.12); 
-      border:2px solid #000000707505;
     }
     .logo-row{
       display:flex;
@@ -164,7 +159,7 @@
     .logo-row img{height:36px;}
     .hero-title{
       text-align:center;
-      font-size:2.1rem;
+      font-size:3.0rem;
       font-weight:700;
       letter-spacing:.5px;
       margin-top:24px;
@@ -317,22 +312,28 @@
 </head>
 <body>
 
-  <header class="top-banner" role="banner">
-    <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-      <ul class="nav mb-0">
+   <header class="top-banner" role="banner">
+
+    <div class="dec a" aria-hidden="true"></div>
+    <div class="dec b" aria-hidden="true"></div>
+
+    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
+        <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
+            <ul class="nav">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/beranda') }}">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
-      </ul>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="hero-title">SAMSAT TANJUNGPINANG</div>
+
+    <div class="hero-title">SAMSAT<br>TANJUNGPINANG</div>
     <div class="logo-row">
       <img src="https://i.ibb.co/tscFZBK/logo-korlantas.png" alt="Korlantas">
       <img src="https://i.ibb.co/Gtrh6nj/logo-polda-kepri.png" alt="Polda Kepri">
       <img src="https://i.ibb.co/xzJHDq7/logo-jsf.png" alt="JSF">
     </div>
-    <div class="hero-sub">Sejarah SAMSAT</div>
   </header>
 
   <main class="stage" role="main">
@@ -351,7 +352,7 @@
     <div class="layanan-title">LAYANAN LENGKAP</div>
     <div class="layanan-row">
       <ul class="layanan-list">
-        <li class="judul">Pelayanan pada Kantor Samsat Tanjungpinang terdiri dari :</li>
+        <li class="judul">Pelayanan pada Kantor Samsat Tanjungpinang<br>terdiri dari :</li>
         <li>1. Perpanjangan Pajak 1 Tahun</li>
         <li>2. Perpanjangan Pajak 5 Tahun</li>
         <li>3. Rubentina</li>
