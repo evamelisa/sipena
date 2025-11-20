@@ -102,9 +102,6 @@
                 text-align: center;
                 font-weight: 700;
             }
-
-
-/* Bisa tambahkan styling berbeda jika mau */
 .visi-box {
     border-left: 6px solid #163a8a;
 }
