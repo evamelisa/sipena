@@ -7,27 +7,28 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
         <style>
-            :root{
-                --deep-1:#0b2a66;
-                --deep-2:#163a8a;
-                --accent:#6c7cf0;
-                --bg:#f4f6fb;
-                --card:#ffffff;
-                --muted:#6b7a90;
-            }
-            *{box-sizing:border-box}
-            body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-            
-            .top-banner{
-            background: linear-gradient(90deg,var(--deep-1) 0%, var(--deep-2) 100%);
+        :root{
+            --deep-1:#0b2a66;
+            --deep-2:#163a8a;
+            --bg:#f4f6fb;
+            --card:#ffffff;
+            --muted:#6b7a90;
+        }
+        *{box-sizing:border-box}
+        body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
+        html, body { font-size: 15px; } /* font lebih besar */
+
+        .top-banner{
+            background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
             color:#fff;
-            padding:28px 0 72px;
+            padding:25px 0 50px;
             border-bottom-left-radius:88px;
             border-bottom-right-radius:88px;
             position:relative;
             overflow:hidden;
         }
-            .nav-pills-centered{ 
+        
+        .nav-pills-centered{ 
             display:inline-flex; 
             gap:.35rem; 
             background: rgba(255,255,255,0.06); 
@@ -35,28 +36,28 @@
             border-radius:999px; 
             box-shadow:0 8px 26px rgba(11,42,102,0.12); 
         }
-        .nav-pills-centered .nav-link{ 
-            color:#fff; 
-            padding:.35rem .9rem; 
-            border-radius:30px; 
-            font-weight:600; 
-            font-size:.9rem; 
-            opacity:.98; 
+        .nav-pills-centered .nav-link{
+            color:#fff;
+            padding:.35rem .9rem;
+            border-radius:30px;
+            font-weight:600;
+            font-size:1.08rem;
+            opacity:.98;
         }
-        .nav-pills-centered .nav-link.active{ 
+        .nav-pills-centered .nav-link.active{
             background: rgba(255,255,255,0.12); 
         }
             
             .hero{ 
             text-align:center; 
             max-width:1100px; 
-            margin:10px auto 0; 
+            margin:35px auto 0; 
             padding:0 16px; 
             position:relative; 
             z-index:2; 
         }
         .hero h1{ 
-            margin:8px 0; 
+            margin:15px 0; 
             font-size:1.6rem; 
             font-weight:700; 
             color:#fff; 
@@ -71,65 +72,56 @@
         }
             .section-definisi{
                 background: none;
-                margin:0 auto;
-                max-width:1100px;
-                margin-top:48px;
+                margin: 7rem;
+                max-width:2000px;
+                margin-top:8px;
                 margin-bottom:18px;
                 position:relative;
                 z-index:2;
             }
+
             .definisi-card{
                 background:var(--card);
                 color:#233;
-                border-radius:18px;
-                margin-top: 48px;
-                padding:28px 28px 18px 28px;
+                border-radius:40px;
+                margin:25px auto;
+                padding:28px;
                 box-shadow:0 8px 32px rgba(11,42,102,0.10);
                 font-size:1.08rem;
-                margin-bottom:50px;
-            }
-            .definisi-card h5{
-                font-weight:700;
-                font-size:1.25rem;
-                margin-bottom:12px;
-                text-align:center;
-                color:var(--deep-1);
-                letter-spacing:.5px;
-            }
-            .definisi-card p{
+                width:300%;
+                max-width:1300px;
+            
                 margin-bottom:17px;
                 font-size:1.08rem;
                 line-height:1.7;
                 color:#233;
                 text-align:justify;
             }
-            .visi-misi-row{
-                display:grid;
-                grid-template-columns:repeat(2,1fr);
-                gap:18px;
-                margin-top:18px;
-                margin-bottom:18px;
+
+            .definisi-card h5 {
+                text-align: center;
+                font-weight: 700;
             }
-            .box-blue{
-                background:var(--deep-2);
-                color:#fff;
-                padding:18px;
-                border-radius:8px;
-                border:1px solid rgba(255,255,255,0.03);
-                box-shadow:0 8px 18px rgba(11,42,102,0.08);
+
+
+/* Bisa tambahkan styling berbeda jika mau */
+.visi-box {
+    border-left: 6px solid #163a8a;
+}
+
+.misi-box {
+    border-left: 6px solid #4070b6;
+}
+
+            @media (max-width: 800px) {
+                .content-box {
+                    grid-template-columns: 1fr;
+                    padding: 1.2rem;
+                }
+                .section h2 { margin-bottom: 12px; }
+                .visi-text, .misi-list { text-align: left; }
             }
-            .box-blue h5{
-                margin:0 0 8px 0;
-                font-weight:700;
-                color:#fff;
-                font-size:1.08rem;
-            }
-            .box-blue p{
-                margin:0;
-                color:#fff;
-                line-height:1.6;
-                font-size:1.08rem;
-            }
+
             .footer-info{
                 max-width:900px;
                 margin:32px auto 24px auto;
@@ -184,19 +176,23 @@
                     <p>Registrasi dan identifikasi kendaraan bermotor dilakukan oleh Kepolisian Negara Republik Indonesia, pemungutan pajak kendaraan bermotor dan Bea Balik Nama Kendaraan Bermotor dilakukan oleh Pemerintah Daerah, dan pengelolaan SWDKLLJ dilakukan oleh PT Jasa Raharja (Persero) yang bertugas mengelola SWDKLLJ.</p>
                 </div>
             </section>
-            <div class="visi-misi-row">
-                <div class="box-blue">
-                    <h5>VISI</h5>
-                    <p>Tercapainya optimalisasi penerimaan daerah melalui pelayanan yang profesional, transparan, dan akuntabel.</p>
-                </div>
-                <div class="box-blue">
-                    <h5>MISI</h5>
-                    <p>1. Menyelenggarakan Pelayanan Pendaftaran Kendaraan Bermotor.<br>
-                    2. Menyelenggarakan Pelayanan Penerbitan STNK dan BPKB.<br>
-                    3. Menyelenggarakan Pelayanan Pemungutan Pajak Kendaraan Bermotor dan Bea Balik Nama Kendaraan Bermotor.<br>
-                    4. Menyelenggarakan Pelayanan Pembayaran Sumbangan Wajib Dana Kecelakaan Lalu Lintas dan Angkutan Jalan (SWDKLLJ).</p>
-                </div>
+            <div class="definisi-card visi-box">
+            
+                <h2>VISI</h2>
+                <p>
+                    Terwujudnya Badan Pendapatan Daerah sebagai Organisasi yang Profesional, Transparan, dan Akuntabel dalam rangka Peningkatan Pendapatan Daerah
+                </p>
             </div>
+            <div class="definisi-card misi-box">
+                <h2>MISI</h2>
+                <ol class="misi-list">
+                    <li>Meningkatnya Profesionalisme Aparatur dalam Rangka Peningkatan Pendapatan Daerah.</li>
+                    <li>Menciptakan Keterbukaan, Keadilan dan Kepastian Hukum dalam kegiatan penerimaan Pendapatan Daerah.</li>
+                    <li>Meningkatnya Pengawasan terhadap Kegiatan Pendapatan Daerah.</li>
+                    <li>Meningkan Pendapatan Daerah Melalui Ekstensifikasi dan Intensifikasi Pendapatan Daerah</li>
+                </ol>
+            </div>
+        </div>
         </main>
         <footer class="footer-info">
             <div>
