@@ -21,7 +21,7 @@
         .top-banner{
             background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
             color:#fff;
-            padding:25px 0 50px;
+            padding:25px 0 45px;
             border-bottom-left-radius:88px;
             border-bottom-right-radius:88px;
             position:relative;
@@ -58,8 +58,8 @@
         }
         .hero h1{ 
             margin:15px 0; 
-            font-size:1.6rem; 
-            font-weight:700; 
+            font-size:1.7rem; 
+            font-weight:800; 
             color:#fff; 
         }
         .hero p.lead{ 
@@ -68,7 +68,7 @@
             max-width:820px; 
             color:rgba(255,255,255,0.92); 
             line-height:1.5; 
-            font-size:.95rem; 
+            font-size:.98rem; 
         }
             .section-definisi{
                 background: none;
