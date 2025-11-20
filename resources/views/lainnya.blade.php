@@ -53,7 +53,7 @@
       position:relative;
       z-index:5;
     }
-    .faqs-title{ text-align:center; color:var(--deep-1); font-weight:700; margin:6px 0 16px; }
+    
     .tanya-btn{ display:block; margin:12px auto 24px; background:var(--deep-1); color:#fff; border:none; padding:10px 36px; border-radius:6px; font-weight:700; }
 
     .faq-container{
@@ -123,9 +123,9 @@
 
   <main class="stage" role="main">
     <section class="info-card" aria-labelledby="faqs-title">
-      <h2 id="faqs-title" class="faqs-title">FAQs</h2>
+ 
 
-      <button class="tanya-btn" onclick="location.href='{{ url('/kontak') }}'">Tanya Kami</button>
+      <button class="tanya-btn" onclick="location.href='{{ url('/tanya-kami') }}'">Tanya Kami</button>
 
       <section class="faq-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
         <div class="faq-box" tabindex="0">
