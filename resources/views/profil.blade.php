@@ -68,7 +68,7 @@
             max-width:820px; 
             color:rgba(255,255,255,0.92); 
             line-height:1.5; 
-            font-size:.98rem; 
+            font-size:1.0rem; 
         }
             .section-definisi{
                 background: none;
@@ -161,7 +161,7 @@
             <div class="hero" role="region" aria-label="Layanan SAMSAT">
         <h1>Profil SAMSAT Tanjungpinang</h1>
         <p class="top">
-            Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut. Ini dia instansi pemerintahan yang terdapat di dalam Samsat.
+            Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.
         </p>
     </div>
         </header>
@@ -186,7 +186,7 @@
                     <li>Meningkatnya Profesionalisme Aparatur dalam Rangka Peningkatan Pendapatan Daerah.</li>
                     <li>Menciptakan Keterbukaan, Keadilan dan Kepastian Hukum dalam kegiatan penerimaan Pendapatan Daerah.</li>
                     <li>Meningkatnya Pengawasan terhadap Kegiatan Pendapatan Daerah.</li>
-                    <li>Meningkan Pendapatan Daerah Melalui Ekstensifikasi dan Intensifikasi Pendapatan Daerah</li>
+                    <li>Meningkatnya Pendapatan Daerah Melalui Ekstensifikasi dan Intensifikasi Pendapatan Daerah</li>
                 </ol>
             </div>
         </div>
