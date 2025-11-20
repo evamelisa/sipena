@@ -22,6 +22,14 @@ Route::get('/samsat-corner', function() {
     return view('samsat.corner');
 })->name('samsat.corner');
 
+Route::get('/informasi', function() {
+    return view('Informasi');
+})->name('informasi');
+
+Route::get('/laporan', function() {
+    return view('Laporan');
+})->name('laporan');
+
 Route::get('/layanan/kantor-samsat', function(){ return view('kantor-samsat'); })->name('layanan.kantor-samsat');
 Route::get('/layanan/samsat-corner', function(){ return view('samsat-corner'); })->name('layanan.samsat-corner');
 Route::get('/layanan/samsat-bergerak', function(){ return view('samsat-bergerak'); })->name('layanan.samsat-bergerak');

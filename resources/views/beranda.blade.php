@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html lang="id">
-<head>
+<head>  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
       @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -11,7 +12,7 @@
 
    <style>
     :root{
-      --deep-1:#0b2a66;
+      --deep-1:#092a69;
       --deep-2:#163a8a;
       --bg:#f4f6fb;
       --card:#ffffff;
@@ -19,52 +20,38 @@
     }
     *{box-sizing:border-box}
     body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-    html, body { font-size: 15px; } /* font lebih besar */
+    
 
     .top-banner{
-      background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
+      background: linear-gradient(180deg,var(--deep-1),var(--deep-2));
       color:#fff;
       padding:25px 0 50px;
-      border-bottom-left-radius:88px;
-      border-bottom-right-radius:88px;
       position:relative;
       overflow:hidden;
+      display:flex;
+      flex-direction:column;
     }
-    .nav-pills-centered{ 
-      display:inline-flex; 
-      gap:.35rem; 
-      background: rgba(255,255,255,0.06); 
-      padding:6px 10px; 
-      border-radius:999px; 
-      box-shadow:0 8px 26px rgba(11,42,102,0.12); 
-    }
-    .nav-pills-centered .nav-link{
-      color:#fff;
-      padding:.35rem .9rem;
-      border-radius:30px;
-      font-weight:600;
-      font-size:1.08rem;
-      opacity:.98;
-    }
-   .nav-pills-centered .nav-link.active{
-      background: rgba(255,255,255,0.12); 
+    .banner-content{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 70px;
+      gap:40px;
     }
     .logo-row{
       display:flex;
-      justify-content:flex-end;
-      gap:12px;
-      margin-top:-32px;
-      margin-bottom:8px;
-      padding-right:24px;
+      gap:20px;
+      align-items:center;
+      flex-shrink:0;
     }
-    .logo-row img{height:36px;}
+    .logo-row img{height:110px;}
     .hero-title{
-      text-align:center;
-      font-size:3.0rem;
+      text-align:left;
+      font-size:44px;
       font-weight:700;
       letter-spacing:.5px;
-      margin-top:24px;
-      margin-bottom:0;
+      margin:0;
+      padding:0;
     }
     .hero-sub{
       text-align:center;
@@ -85,7 +72,7 @@
     .sejarah-card{
       background:var(--deep-2);
       color:#fff;
-      border-radius:18px;
+      border-radius:50px;
       padding:28px 28px 18px 28px; /* padding lebih besar */
       box-shadow:0 8px 32px rgba(11,42,102,0.12);
       font-size:1.08rem; /* font lebih besar */
@@ -109,23 +96,28 @@
     .layanan-title{
       text-align:center;
       font-weight:700;
+      color:#091161;
       margin:32px 0 10px 0;
-      font-size:1.15rem;
+      font-size:1.35rem;
       letter-spacing:.5px;
     }
     .layanan-row{
       display:flex;
       justify-content:center;
-      gap:32px;
+      gap: 100px;
       margin-bottom:8px;
       flex-wrap:wrap;
     }
     .layanan-list{
       font-size:1.08rem;
-      color:#233;
+      color:#091161;
       margin-bottom:0;
       padding-left:0;
       list-style:none;
+      width:300px;  
+    }
+    .layanan-list:last-child{
+      width:180px;
     }
     .layanan-list li{
       margin-bottom:2px;
@@ -134,48 +126,105 @@
     .layanan-list .judul{
       font-weight:700;
       margin-bottom:6px;
-      color:var(--deep-1);
+      color:#091161;
       font-size:1.12rem;
       list-style:none;
     }
     .layanan-list .jenis{
       font-weight:700;
       margin-bottom:6px;
-      color:var(--deep-2);
+      color:#091161;
       font-size:1.12rem;
       list-style:none;
     }
+    .section-manfaat{
+      background: none;
+      margin:0 auto;
+      width:1100px;
+      margin-top:48px;
+      margin-bottom:18px;
+      position:relative;
+      z-index:2;
+    }
+    
+    .manfaat-card h5{
+      font-weight:700;
+      font-size:1.35rem;
+      margin-bottom:16px;
+      color:var(--deep-1);
+      letter-spacing:.5px;
+            padding: 0 1.5rem;
+    }
+    .manfaat-card p{
+      margin-bottom:16px;
+      font-size:1.08rem;
+      line-height:1.7;
+      color:#233;
+      text-align:justify;
+      padding: 0 1.5rem;
+    }
+    .manfaat-item{
+      margin-bottom:18px;
+      padding-bottom:18px;
+            padding: 0 1.5rem;
+    }
+    .manfaat-item:last-of-type{
+      border-bottom:none;
+    }
+    .manfaat-item h6{
+      font-weight:700;
+      font-size:1.12rem;
+      color:var(--deep-1);
+      margin-bottom:8px;
+    }
+    .manfaat-item p{
+      margin-bottom:12px;
+    }
+    @media (max-width:900px){
+      .section-manfaat{max-width:98vw;}
+      .manfaat-card{padding:20px;}
+    }
     .icon-section{
       background: linear-gradient(180deg,var(--deep-1),var(--deep-2));
-      border-radius:22px;
-      margin:32px auto 0 auto;
-      max-width:520px;
-      padding:24px 0 10px 0;
+      border-top-left-radius:50px;
+      border-top-right-radius:50px;
+      margin:50px auto 0 auto;
+      padding:50px 0 50px 0;
       box-shadow:0 12px 32px rgba(11,42,102,0.12);
       display:flex;
       justify-content:center;
-      gap:32px;
+      gap:45px;
     }
     .icon-box{
       background:var(--card);
-      border-radius:14px;
-      padding:14px 10px 8px 10px;
-      width:100px;
+      border-radius:20px;
+      width:160px;
+      height:160px;
       text-align:center;
       box-shadow:0 8px 18px rgba(15,23,42,0.06);
       color:var(--deep-1);
       font-weight:600;
-      font-size:1.08rem;
+      font-size:16px;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
-      gap:4px;
+      gap:8px;
     }
     .icon-box img{
-      width:36px;
-      height:36px;
-      margin-bottom:6px;
+      width:80px;
+      height:80px;
+    }
+    .icon-box a.icon-link{
+      display:inline-block;
+      background:none;
+      border:none;
+      padding:0;
+      color:inherit;
+      text-decoration:none;
+      font-weight:600;
+      font-size:16px;
+      line-height:1.1;
     }
     footer{
       max-width:900px;
@@ -218,28 +267,20 @@
     <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
 
-    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
-        <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/beranda') }}">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="hero-title">SAMSAT<br>TANJUNGPINANG</div>
-    <div class="logo-row">
-      <img src="https://i.ibb.co/tscFZBK/logo-korlantas.png" alt="Korlantas">
-      <img src="https://i.ibb.co/Gtrh6nj/logo-polda-kepri.png" alt="Polda Kepri">
-      <img src="https://i.ibb.co/xzJHDq7/logo-jsf.png" alt="JSF">
+    @include('navbar')
+    <div class="banner-content">
+      <div class="hero-title">SAMSAT <br> TANJUNGPINANG</div>
+      <div class="logo-row">
+        <img src="{{ asset('image/polantas.png') }}" alt="Korlantas">
+        <img src="{{ asset('image/logo-kepri.png') }}" alt="Polda Kepri">
+        <img src="{{ asset('image/jasa-raharja.png') }}" alt="Jasa Raharja">
+      </div>
     </div>
   </header>
 
   <main class="stage" role="main">
     <section class="section-sejarah">
-      <div class="sejarah-card">
+      <div class="sejarah-card"> 
         <h5>Sejarah SAMSAT</h5>
         <p>
             SAMSAT Tanjungpinang diresmikan pada tanggal 15 April 1982 yang merupakan SAMSAT Pemerintah Tk.I Provinsi Riau sebelum terbentuknya Provinsi Kepulauan Riau. Sejak tahun 2005 diambil alih Kantor Unit Pelayanan Teknis Tanjungpinang yang selanjutnya terjadi perubahan nama menjadi Unit Pelaksana Teknis (UPT) SAMSAT Tanjungpinang terdiri atas 3 (tiga) instansi yaitu Kepolisian Resor Kota Tanjungpinang, Dinas Pendapatan Daerah Propinsi Kepulauan Riau serta Jasa Raharja.
@@ -253,7 +294,7 @@
     <div class="layanan-title">LAYANAN LENGKAP</div>
     <div class="layanan-row">
       <ul class="layanan-list">
-        <li class="judul">Pelayanan pada Kantor Samsat Tanjungpinang<br>terdiri dari :</li>
+        <li class="judul">Pelayanan pada Kantor Samsat<br>Tanjungpinang terdiri dari :</li>
         <li>1. Perpanjangan Pajak 1 Tahun</li>
         <li>2. Perpanjangan Pajak 5 Tahun</li>
         <li>3. Rubentina</li>
@@ -271,18 +312,51 @@
       </ul>
     </div>
 
+    <section class="section-manfaat">
+      <div class="manfaat-card">
+        <h5>Manfaat Bayar Pajak Kendaraan Tepat Waktu</h5>
+        <p>Membayar pajak kendaraan tepat waktu memiliki berbagai manfaat yang sangat penting, baik untuk pemilik kendaraan maupun untuk kepentingan bersama. Berikut adalah beberapa manfaat utama dari membayar pajak kendaraan tepat waktu:</p>
+
+        <div class="manfaat-item">
+          <h6>1). Menghindari Denda dan Sanksi</h6>
+          <p>Salah satu manfaat utama dari membayar pajak kendaraan tepat waktu adalah menghindari denda keterlambatan. Setiap keterlambatan dalam pembayaran pajak kendaraan akan dikenakan denda yang jumlahnya dapat bertambah seiring berjalannya waktu.</p>
+          <p>Dengan membayar tepat waktu, Anda dapat menghemat biaya tambahan dan menghindari masalah hukum yang bisa timbul akibat kelalaian dalam pembayaran.</p>
+        </div>
+
+        <div class="manfaat-item">
+          <h6>2). Memperoleh Kendaraan yang Terdaftar Secara Legal</h6>
+          <p>Pajak kendaraan yang dibayar tepat waktu adalah salah satu syarat agar kendaraan tetap sah secara hukum dan terdaftar dengan baik di sistem kependudukan. Hal ini penting untuk memastikan kendaraan Anda memiliki dokumen yang lengkap dan legal.</p>
+          <p>Kendaraan yang tidak membayar pajak atau pajaknya sudah kadaluarsa bisa menghadapi masalah seperti tidak bisa diperpanjang STNK (Surat Tanda Nomor Kendaraan) atau tidak dapat melakukan perpanjangan registrasi kendaraan.</p>
+        </div>
+
+        <div class="manfaat-item">
+          <h6>3). Mendukung Pembangunan Infrastruktur dan Layanan Publik</h6>
+          <p>Pajak kendaraan yang dibayarkan tepat waktu akan digunakan untuk mendanai berbagai proyek pembangunan infrastruktur, seperti perbaikan jalan raya, pembangunan jembatan, dan peningkatan fasilitas transportasi lainnya.</p>
+          <p>Dengan membayar pajak kendaraan tepat waktu, Anda berkontribusi pada peningkatan kualitas infrastruktur dan fasilitas publik yang dapat meningkatkan kenyamanan dan keamanan bagi seluruh masyarakat.</p>
+        </div>
+
+        <div class="manfaat-item">
+          <h6>4). Mencegah Kendaraan Ditahan atau Ditarik</h6>
+          <p>Jika Anda terus-menerus menunggak pembayaran pajak kendaraan, kendaraan Anda dapat dikenakan tindakan tegas oleh pihak berwenang, seperti ditahan atau ditarik.</p>
+          <p>Dengan membayar tepat waktu, Anda dapat menghindari potensi masalah ini dan memastikan kendaraan Anda tetap bisa digunakan tanpa gangguan.</p>
+        </div>
+
+        <p style="margin-top:20px; ">Secara keseluruhan, membayar pajak kendaraan tepat waktu tidak hanya menguntungkan pemilik kendaraan, tetapi juga memberikan dampak positif bagi masyarakat dan pemerintah dalam meningkatkan kualitas layanan dan pembangunan daerah.</p>
+      </div>
+    </section>
+
     <section class="icon-section">
       <div class="icon-box">
-        <img src="https://i.ibb.co/y5mTTBQ/icon-info.png" alt="Info Pelayanan" />
-        <div>Info Layanan</div>
+        <img src="{{ asset('image/icon-informasi.png') }}" alt="Info Pelayanan" />
+        <div><a href="{{ route('informasi') }}" class="icon-link">Informasi<br>Lebih Lanjut</a></div>
       </div>
       <div class="icon-box">
-        <img src="https://i.ibb.co/cTqjZtX/icon-calendar.png" alt="Jadwal Samsat" />
-        <div>Jadwal Samsat</div>
+        <img src="{{ asset('image/icon-kalender.png') }}" alt="Jadwal Samsat" />
+        <div><a href="{{ route('layanan.jadwal-samsat') }}" class="icon-link">Jadwal<br>Samsat</a></div>
       </div>
       <div class="icon-box">
-        <img src="https://i.ibb.co/4tSNT6Q/icon-announcement.png" alt="Laporan" />
-        <div>Laporan</div>
+        <img src="{{ asset('image/icon-speaker.png') }}" alt="Laporan" />
+        <div><a href="{{ route('laporan') }}" class="icon-link">Laporan</a></div>
       </div>
     </section>
   </main>
@@ -301,7 +375,6 @@
       <p>uptdppinang@gmail.com</p>
     </div>
   </footer>
->>>>>>> backend-update-new
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
