@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
-   <style>
+  <style>
     :root{
       --deep-1:#092a69;
       --deep-2:#163a8a;
@@ -226,19 +226,6 @@
       font-size:16px;
       line-height:1.1;
     }
-    footer{
-      max-width:900px;
-      margin:32px auto 24px auto;
-      display:flex;
-      justify-content:space-between;
-      gap:24px;
-      flex-wrap:wrap;
-      color:#222;
-      font-weight:600;
-      font-size:1.08rem;
-    }
-    footer div{ flex-basis:45%; min-width:220px; }
-    footer p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
     @media (max-width:900px){
       .section-sejarah{max-width:98vw;}
     }
@@ -258,11 +245,10 @@
       z-index:1;
     }
   </style>
-  </style>
 </head>
 <body>
 
-   <header class="top-banner" role="banner">
+  <header class="top-banner" role="banner">
 
     <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
@@ -271,9 +257,9 @@
     <div class="banner-content">
       <div class="hero-title">SAMSAT <br> TANJUNGPINANG</div>
       <div class="logo-row">
-        <img src="{{ asset('image/polantas.png') }}" alt="Korlantas">
-        <img src="{{ asset('image/logo-kepri.png') }}" alt="Polda Kepri">
-        <img src="{{ asset('image/jasa-raharja.png') }}" alt="Jasa Raharja">
+        <img src="{{ asset('image/polantas.webp') }}" alt="Korlantas">
+        <img src="{{ asset('image/logo-kepri.webp') }}" alt="Polda Kepri">
+        <img src="{{ asset('image/jasa-raharja.webp') }}" alt="Jasa Raharja">
       </div>
     </div>
   </header>
@@ -347,35 +333,22 @@
 
     <section class="icon-section">
       <div class="icon-box">
-        <img src="{{ asset('image/icon-informasi.png') }}" alt="Info Pelayanan" />
+        <img src="{{ asset('image/icon-informasi.webp') }}" alt="Info Pelayanan" />
         <div><a href="{{ route('informasi') }}" class="icon-link">Informasi<br>Lebih Lanjut</a></div>
       </div>
       <div class="icon-box">
-        <img src="{{ asset('image/icon-kalender.png') }}" alt="Jadwal Samsat" />
+        <img src="{{ asset('image/icon-kalender.webp') }}" alt="Jadwal Samsat" />
         <div><a href="{{ route('layanan.jadwal-samsat') }}" class="icon-link">Jadwal<br>Samsat</a></div>
       </div>
       <div class="icon-box">
-        <img src="{{ asset('image/icon-speaker.png') }}" alt="Laporan" />
+        <img src="{{ asset('image/icon-speaker.webp') }}" alt="Laporan" />
         <div><a href="{{ route('laporan') }}" class="icon-link">Laporan</a></div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div>
-      <p><strong>Hubungi Kami</strong></p>
-      <p>UPTD PPD TANJUNGPINANG</p>
-      <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-      <p>(0771) 21581</p>
-    </div>
-    <div>
-      <p><strong>Jam Layanan</strong></p>
-      <p>Senin - Jumat : 08.00 - 15.00</p>
-      <p>Sabtu : 08.00 - 12.00</p>
-      <p>uptdppinang@gmail.com</p>
-    </div>
-  </footer>
-
+  @include('footer')
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
