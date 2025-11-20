@@ -45,6 +45,7 @@
       flex-shrink:0;
     }
     .logo-row img{height:110px;}
+
     .hero-title{
       text-align:left;
       font-size:44px;
@@ -52,6 +53,7 @@
       letter-spacing:.5px;
       margin:0;
       padding:0;
+      z-index: 1 !important;
     }
     .hero-sub{
       text-align:center;
@@ -104,7 +106,7 @@
     .layanan-row{
       display:flex;
       justify-content:center;
-      gap: 100px;
+      gap: 160px;
       margin-bottom:8px;
       flex-wrap:wrap;
     }
@@ -282,7 +284,7 @@
       <ul class="layanan-list">
         <li class="judul">Pelayanan pada Kantor Samsat<br>Tanjungpinang terdiri dari :</li>
         <li>1. Perpanjangan Pajak 1 Tahun</li>
-        <li>2. Perpanjangan Pajak 5 Tahun</li>
+        <li>2. Perpanjangan Pajak 5 Tahun<br>atau Ganti STNK</li>
         <li>3. Rubentina</li>
         <li>4. Balik Nama</li>
         <li>5. Cek Fisik</li>
@@ -290,11 +292,10 @@
       </ul>
       <ul class="layanan-list">
         <li class="jenis">Jenis Layanan :</li>
-        <li>1. Samsat Bergerak </li>
-        <li>2. Samsat Keliling </li>
+        <li>1. Samsat Bergerak (SAMBER) </li>
+        <li>2. Samsat Keliling (SAMLING) </li>
         <li>3. Samsat Corner</li>
         <li>4. Pelantar Emas</li>
-        <li>5. Jadwal Samsat</li>
       </ul>
     </div>
 
@@ -349,6 +350,6 @@
 
   @include('footer')
   
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

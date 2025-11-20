@@ -25,6 +25,6 @@
       <p><strong>Jam Layanan</strong></p>
       <p>Senin - Jumat : 08.00 - 15.00</p>
       <p>Sabtu : 08.00 - 12.00</p>
-      <p>uptdppinang@gmail.com</p>
+      <p>uptppdpinang@gmail.com</p>
     </div>
   </footer>
