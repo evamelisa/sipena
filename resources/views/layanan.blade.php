@@ -24,7 +24,7 @@
         .top-banner{
             background: linear-gradient(90deg,var(--deep-1) 0%, var(--deep-2) 100%);
             color:#fff;
-            padding:28px 0 72px;
+            padding:28px 0 62px;
             border-bottom-left-radius:88px;
             border-bottom-right-radius:88px;
             position:relative;
@@ -60,6 +60,7 @@
         }
         .hero h1{ 
             margin:8px 0; 
+            margin-top: 30px;
             font-size:1.6rem; 
             font-weight:700; 
             color:#fff; 
@@ -112,6 +113,11 @@
             position:relative; 
             z-index:5; 
         }
+        .layanan-title{ text-align:center; 
+        color:var(--deep-1); 
+        font-weight:700; 
+        margin:6px 0 16px; 
+        }
         .info-left h4{ 
             color:var(--deep-1); 
             font-weight:700; 
@@ -161,6 +167,7 @@
             min-height:110px; 
             width:100%; 
             max-width:320px; 
+            text-decoration: none;
         }
         .service-tile{
             display:flex;
@@ -176,7 +183,7 @@
             box-shadow: 0 12px 30px rgba(11,42,102,0.12);
             text-transform:uppercase;
             letter-spacing:.6px;
-            font-size:.95rem;
+            font-size:1.35rem;
             margin:0 auto;
         }
         .service-caption{ text-align:center; margin-top:10px; color:var(--muted); font-size:.95rem; }
@@ -246,8 +253,8 @@
     <!-- top white card -->
     <section class="info-card" aria-labelledby="layanan-title">
         <div class="row gx-4">
-            <div class="col-lg-8">
-                <h4 id="layanan-title">Jenis Layanan</h4>
+            <div class="col-lg-8 mx-auto">
+                <h2 id="layanan-title" class="layanan-title">Jenis Layanan</h2>
                 <p class="mb-0">Pilih kategori layanan di bawah untuk melihat detail, persyaratan, dan alur pelayanan.</p>
             </div>
 
@@ -279,37 +286,22 @@
         </div>
 
     </section>
-
-    <!-- optional deep block for notes / prosedur -->
-    <section class="deep-block mt-4" aria-label="Prosedur dan catatan">
-        <div class="deep-inner">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="panel-soft">
-                        <div class="title">Prosedur Umum</div>
-                            <li>Persiapkan dokumen KTP, STNK, BPKP bila perlu</li>
-                            <li>Cek persyaratan spesifik tiap layanan</li>
-                            <li>Ambil nomor antrian atau ajukan online (jika tersedia).</li>
-                            <li>Selesaikan pembayaran dan ambil bukti layanan.</li>
-                    </div>
-                </div>
 </main>
 
-  <footer class="footer-info" aria-label="Informasi kontak dan jam layanan">
+<footer class="footer-info" aria-label="Informasi kontak dan jam layanan">
     <div>
-      <p class=""><strong>Hubungi Kami</strong></p>
-      <p>UPTD PPD TANJUNGPINANG</p>
-      <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-      <p>(0771) 21581</p>
+    <p class=""><strong>Hubungi Kami</strong></p>
+    <p>UPTD PPD TANJUNGPINANG</p>
+    <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
+    <p>(0771) 21581</p>
     </div>
     <div>
-      <p><strong>Jam Layanan</strong></p>
-      <p>Senin - Jumat : 08.00 - 15.00</p>
-      <p>Sabtu : 08.00 - 12.00</p>
-      <p>uptdppinang@gmail.com</p>
+    <p><strong>Jam Layanan</strong></p>
+    <p>Senin - Jumat : 08.00 - 15.00</p>
+    <p>Sabtu : 08.00 - 12.00</p>
+    <p>uptdppinang@gmail.com</p>
     </div>
-  </footer>
-  
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
