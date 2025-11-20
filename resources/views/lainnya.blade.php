@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+
   <title>FAQs - UPTD SAMSAT TANJUNGPINANG</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -18,7 +20,12 @@
       --muted:#6b7a90;
     }
     *{box-sizing:border-box}
-    body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      margin:0;
+      color:#233;
+    }
 
     /* Header / hero */
     .top-banner{
@@ -30,13 +37,48 @@
       position:relative;
       overflow:hidden;
     }
-    .nav-pills-centered{ display:inline-flex; gap:.35rem; background: rgba(255,255,255,0.06); padding:6px 10px; border-radius:999px; box-shadow:0 8px 26px rgba(11,42,102,0.12); }
-    .nav-pills-centered .nav-link{ color:#fff; padding:.35rem .9rem; border-radius:30px; font-weight:600; font-size:.9rem; opacity:.98; }
-    .nav-pills-centered .nav-link.active{ background: rgba(255,255,255,0.12); }
+    .nav-pills-centered{ 
+      display:inline-flex; 
+      gap:.35rem; 
+      background: rgba(255,255,255,0.06); 
+      padding:6px 10px; 
+      border-radius:999px; 
+      box-shadow:0 8px 26px rgba(11,42,102,0.12);
+    }
+    .nav-pills-centered .nav-link{ 
+      color:#fff; 
+      padding:.35rem .9rem; 
+      border-radius:30px; 
+      font-weight:600; 
+      font-size:.9rem; 
+      opacity:.98; 
+    }
+    .nav-pills-centered .nav-link.active{ 
+      background: rgba(255,255,255,0.12); 
+    }
 
-    .hero{ text-align:center; max-width:1100px; margin:10px auto 0; padding:0 16px; position:relative; z-index:2; }
-    .hero h1{ margin:8px 0; font-size:1.6rem; font-weight:700; color:#fff; }
-    .hero p.lead{ margin:0 auto; max-width:820px; color:rgba(255,255,255,0.92); line-height:1.5; font-size:.95rem; }
+    .hero{ 
+      text-align:center; 
+      max-width:1100px; 
+      margin:10px auto 0; p
+      adding:0 16px; 
+      position:relative; 
+      z-index:2; 
+    }
+    .hero h1{ 
+      margin:8px 0; 
+      font-size:1.6rem; 
+      font-weight:700; 
+      color:#fff; 
+    }
+    .hero p.lead{ 
+      margin:0 auto; 
+      margin-top: 30px;
+      max-width:820px; 
+      color:rgba(255,255,255,0.92); 
+      line-height:1.50; 
+      font-size:.95rem; 
+    }
 
     .dec { position:absolute; border-radius:50%; filter:blur(8px); opacity:.12; z-index:1; pointer-events:none; }
     .dec.a { width:240px; height:240px; background:var(--accent); right:28px; top:-40px; transform:rotate(12deg); }
@@ -49,12 +91,36 @@
       border-radius:14px;
       padding:26px;
       box-shadow:0 20px 48px rgba(15,23,42,0.08);
-      margin-top:-80px;
+      margin-top: 30px;
       position:relative;
       z-index:5;
     }
-    .faqs-title{ text-align:center; color:var(--deep-1); font-weight:700; margin:6px 0 16px; }
-    .tanya-btn{ display:block; margin:12px auto 24px; background:var(--deep-1); color:#fff; border:none; padding:10px 36px; border-radius:6px; font-weight:700; }
+    .faqs-title{ text-align:center; 
+      color:var(--deep-1); 
+      font-weight:700; 
+      margin:6px 0 16px; 
+    }
+    .tanya-btn{ 
+      display:block; 
+      margin:12px auto 24px; 
+      background:var(--deep-1); 
+      color:#fff; 
+      border:none; 
+      padding:10px 36px; 
+      border-radius:6px; 
+      font-weight:700; 
+      text-align: center;
+    }
+.tanya-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.tanya-btn:hover {
+    background-color: #001f4f;
+}
+
 
     .faq-container{
       display:grid;
@@ -74,28 +140,26 @@
     }
     .faq-box strong{ display:block; margin-bottom:.5rem; font-weight:700; }
 
-    footer.footer-info{
-      max-width:1100px;
-      margin:28px auto 40px;
-      display:flex;
-      justify-content:space-between;
-      gap:2rem;
-      flex-wrap:wrap;
-      color:#222;
-      font-weight:600;
-    }
-    footer.footer-info div{ flex-basis:45%; min-width:260px; background:transparent; }
-    footer.footer-info p{ margin:.2rem 0; font-weight:400; }
-
-    @media (max-width:1024px){
-      .faq-container{ grid-template-columns:repeat(2,1fr); }
-    }
-    @media (max-width:640px){
-      .faq-container{ grid-template-columns:1fr; }
-      .nav-pills-centered{ transform:scale(.95); }
-      .hero h1{ font-size:1.25rem; }
-      .info-card{ margin-top:-48px; padding:18px; }
-    }
+    .footer-info{
+                max-width:900px;
+                margin:32px auto 24px auto;
+                display:flex;
+                justify-content:space-between;
+                gap:24px;
+                flex-wrap:wrap;
+                color:#222;
+                font-weight:600;
+                font-size:1.08rem;
+            }
+            .footer-info div{ flex-basis:45%; min-width:220px; }
+            .footer-info p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
+            @media (max-width:900px){
+                .section-definisi{max-width:98vw;}
+            }
+            @media (max-width:600px){
+                .footer-info{flex-direction:column;gap:8px;}
+                .visi-misi-row{grid-template-columns:1fr;}
+            }
   </style>
 </head>
 <body>
@@ -116,7 +180,6 @@
     </div>
 
     <div class="hero" role="region" aria-label="Lainnya / FAQs">
-      <h1>FAQs</h1>
       <p class="lead">Pertanyaan dan persyaratan yang sering ditanyakan tentang layanan SAMSAT Tanjungpinang.</p>
     </div>
   </header>
@@ -125,7 +188,9 @@
     <section class="info-card" aria-labelledby="faqs-title">
       <h2 id="faqs-title" class="faqs-title">FAQs</h2>
 
-      <button class="tanya-btn" onclick="location.href='{{ url('/kontak') }}'">Tanya Kami</button>
+<a href="{{ route('lainnya.tanya-kami') }}" class="tanya-btn">
+    Tanya Kami
+</a>
 
       <section class="faq-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
         <div class="faq-box" tabindex="0">
