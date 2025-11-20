@@ -27,7 +27,7 @@
       color:#233;
     }
 
-    /* Header / hero */
+    /* Header hero */
     .top-banner{
       background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
       color:#fff;
@@ -61,7 +61,7 @@
       text-align:center; 
       max-width:1100px; 
       margin:10px auto 0; p
-      adding:0 16px; 
+      padding:0 16px; 
       position:relative; 
       z-index:2; 
     }
@@ -77,7 +77,7 @@
       max-width:820px; 
       color:rgba(255,255,255,0.92); 
       line-height:1.50; 
-      font-size:.95rem; 
+      font-size:1.1rem; 
     }
 
     .dec { position:absolute; border-radius:50%; filter:blur(8px); opacity:.12; z-index:1; pointer-events:none; }
@@ -85,7 +85,7 @@
     .dec.b { width:120px; height:120px; background:rgba(255,255,255,0.08); left:18px; top:-20px; }
 
     /* content card */
-    .stage{ max-width:1100px; margin:0 auto 48px; padding:18px; position:relative; }
+    .stage{ max-width:1350px; margin:0 auto 48px; padding:18px; position:relative; }
     .info-card{
       background:var(--card);
       border-radius:14px;
@@ -100,21 +100,24 @@
       font-weight:700; 
       margin:6px 0 16px; 
     }
-    .tanya-btn{ 
-      display:block; 
-      margin:12px auto 24px; 
-      background:var(--deep-1); 
-      color:#fff; 
-      border:none; 
-      padding:10px 36px; 
-      border-radius:6px; 
-      font-weight:700; 
-      text-align: center;
-    }
+    .tanya-btn {
+  display: block;
+  width: fit-content;
+  margin: 12px auto 32px;
+  background: var(--deep-1);
+  color: #fff;
+  border: none;
+  padding: 12px 38px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+}
 .tanya-btn {
     display: block;
     width: fit-content;
-    margin: 0 auto;
+    margin-bottom: 24px;
     text-decoration: none;
 }
 .tanya-btn:hover {
@@ -128,16 +131,26 @@
       gap:1.5rem 1.8rem;
       margin-top:12px;
     }
-    .faq-box{
-      background: white;
-      border: 1px solid rgba(11,26,95,0.06);
-      border-radius:12px;
-      padding:1rem 1.2rem;
-      font-size:.92rem;
-      color:#0b1a5f;
-      box-shadow:0 8px 18px rgba(11,26,95,0.04);
-      white-space:pre-line;
-    }
+    .faq-box {
+  background: white;
+  border: 1px solid rgba(11,26,95,0.06);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 30px;
+  font-size: .92rem;
+  color: #0b1a5f;
+  box-shadow: 0 8px 15px rgba(15, 23, 42, 0.25);
+  white-space: pre-line;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+/* Efek kecil saat hover untuk desktop */
+@media (min-width: 700px) {
+  .faq-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.28);
+  }
+}
     .faq-box strong{ display:block; margin-bottom:.5rem; font-weight:700; }
 
     .footer-info{
@@ -195,38 +208,34 @@
       <section class="faq-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
         <div class="faq-box" tabindex="0">
           <strong>Persyaratan pengurusan PKB Tahunan</strong>
-          Membawa KTP Alat Pemilik Kendaraan Bermotor  
-          STNK Asli   
-          BPKB  
+          - Membawa KTP Alat Pemilik Kendaraan Bermotor  
+          - STNK Asli   
+          - BPKB  
         </div>
 
         <div class="faq-box" tabindex="0">
           <strong>Persyaratan pengurusan PKB 5 Tahun</strong>
-          KTP Alat Pemilik Kendaraan Bermotor  
-          STNK (Asli dan fotocopy)  
-          BPKB (Asli dan fotocopy)  
-          Surat Kuasa Dari Leasing / Badan Hukum  
-          - Salinan Akte Pendirian  
-          - Keterangan Domisili  
-          - Surat Kuasa  
+          - KTP Alat Pemilik Kendaraan Bermotor  
+          - STNK (Asli dan fotocopy)  
+          - BPKB (Asli dan fotocopy) / Surat Kuasa Dari Leasing
+          <strong>Badan Hukum</strong>
+          Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa  
         </div>
 
         <div class="faq-box" tabindex="0">
           <strong>Persyaratan pengurusan BBN KB</strong>
-          KTP Alat Pemilik Kendaraan Bermotor  
-          KTP penyertai kendaraan bermotor (KTP pembeli)  
-          STNK asli dan fotocopy  
-          BPKB asli dan fotocopy  
-          Kwitansi pembelian bermaterai  
-          Badan Hukum  
-          - Salinan Akte Pendirian  
-          - Keterangan Domisili  
-          - Surat Kuasa  
+          - KTP Alat Pemilik Kendaraan Bermotor  
+          - KTP penyertai kendaraan bermotor (KTP pembeli)  
+          - STNK asli dan fotocopy  
+          - BPKB asli dan fotocopy  
+          - Kwitansi pembelian bermaterai  
+          <strong>Badan Hukum</strong>
+          Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa  
         </div>
 
         <div class="faq-box" tabindex="0">
           <strong>Apakah bisa melakukan pembayaran PKB 5 Tahun secara Online?</strong>
-          Untuk kepengurusan kendaraan bermotor 5 tahun, harus dilakukan di kantor Samsat Tanjung Pinang karena prosesnya cukup kompleks.
+          Untuk kepengurusan kendaraan bermotor 5 tahun, harus dilakukan di kantor Samsat Tanjung Pinang karena melibatkan proses yang tidak bisa dilakukan secara online.
         </div>
 
         <div class="faq-box" tabindex="0">
@@ -236,13 +245,13 @@
 
         <div class="faq-box" tabindex="0">
           <strong>Berapa lama waktu yang diperlukan dalam proses pembayaran?</strong>
-          Pendaftaran RABENTAS 1 x 60 menit  
-          Mutasi Masuk (60 Menit)  
-          Mutasi Keluar (60 Menit)  
-          Pendaftaran 5 tahun (60 menit)  
-          Pemeliharaan STNK 6 Bulan (60 Menit)  
-          Perpanjangan BBNKB Asli (60 Menit)  
-          Perpanjangan STNK Tahunan (60 menit)
+          - Pendaftaran RABENTAS 1 x 60 menit  
+          - Mutasi Masuk (60 Menit)  
+          - Mutasi Keluar (60 Menit)  
+          - Pendaftaran 5 tahun (60 menit)  
+          - Pemeliharaan STNK 6 Bulan (60 Menit)  
+          - Perpanjangan BBNKB Asli (60 Menit)  
+          - Perpanjangan STNK Tahunan (60 menit)
         </div>
       </section>
     </section>
