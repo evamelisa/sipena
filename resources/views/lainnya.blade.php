@@ -27,7 +27,6 @@
       color:#233;
     }
 
-    /* Header hero */
     .top-banner{
       background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
       color:#fff;
