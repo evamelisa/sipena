@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <title>FAQs - UPTD SAMSAT TANJUNGPINANG</title>
+  <title>SAMSAT CORNER - UPTD SAMSAT TANJUNGPINANG</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
@@ -56,89 +56,50 @@
     .nav-pills-centered .nav-link.active{ 
       background: rgba(255,255,255,0.12); 
     }
-
-    .hero{ 
-      text-align:center; 
-      max-width:1100px; 
-      margin:10px auto 0; p
-      adding:0 16px; 
-      position:relative; 
-      z-index:2; 
-    }
-    .hero h1{ 
-      margin:8px 0; 
-      font-size:1.6rem; 
-      font-weight:700; 
-      color:#fff; 
-    }
-    .hero p.lead{ 
-      margin:0 auto; 
-      margin-top: 30px;
-      max-width:820px; 
-      color:rgba(255,255,255,0.92); 
-      line-height:1.50; 
-      font-size:.95rem; 
-    }
-
     .dec { position:absolute; border-radius:50%; filter:blur(8px); opacity:.12; z-index:1; pointer-events:none; }
     .dec.a { width:240px; height:240px; background:var(--accent); right:28px; top:-40px; transform:rotate(12deg); }
     .dec.b { width:120px; height:120px; background:rgba(255,255,255,0.08); left:18px; top:-20px; }
 
     /* content card */
-    .stage{ max-width:1100px; margin:0 auto 48px; padding:18px; position:relative; }
+    .stage{ max-width:1350px; margin:0 auto 48px; padding:18px; position:relative; }
     .info-card{
       background:var(--card);
       border-radius:14px;
-      padding:26px;
+      padding:30px;
       box-shadow:0 20px 48px rgba(15,23,42,0.08);
       margin-top: 30px;
       position:relative;
       z-index:5;
     }
-    .faqs-title{ text-align:center; 
+    .corner-title{ text-align:center; 
       color:var(--deep-1); 
       font-weight:700; 
       margin:6px 0 16px; 
     }
-    .tanya-btn{ 
-      display:block; 
-      margin:12px auto 24px; 
-      background:var(--deep-1); 
-      color:#fff; 
-      border:none; 
-      padding:10px 36px; 
-      border-radius:6px; 
-      font-weight:700; 
-      text-align: center;
-    }
-.tanya-btn {
-    display: block;
-    width: fit-content;
-    margin: 0 auto;
-    text-decoration: none;
-}
-.tanya-btn:hover {
-    background-color: #001f4f;
+    .content-box p { text-align: justify;
+  font-size: 0.95rem;   /* lebih kecil */
+  line-height: 1.55rem; /* biar tetap rapi */
 }
 
 
-    .faq-container{
+    .corner-container{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:1.5rem 1.8rem;
       margin-top:12px;
     }
-    .faq-box{
-      background: white;
+    .corner-box{
+      background: #163a8a;
       border: 1px solid rgba(11,26,95,0.06);
       border-radius:12px;
       padding:1rem 1.2rem;
       font-size:.92rem;
-      color:#0b1a5f;
-      box-shadow:0 8px 18px rgba(11,26,95,0.04);
+      text-align: justify;
+      color:#fff;
+      box-shadow:0 8px 18px #0b1a5f0a;
       white-space:pre-line;
     }
-    .faq-box strong{ display:block; margin-bottom:.5rem; font-weight:700; }
+    .corner-box strong{ display:block; margin-bottom:.5rem; font-weight:700; }
 
     .footer-info{
                 max-width:900px;
@@ -173,55 +134,38 @@
         <ul class="nav mb-0">
           <li class="nav-item"><a class="nav-link" href="{{ url('/beranda') }}">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
-          <li class="nav-item"><a class="nav-link active" href="{{ url('/lainnya') }}">Lainnya</a></li>
+          <li class="nav-item"><a class="nav-link active" href="{{ url('/layanan') }}">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="hero" role="region" aria-label="Lainnya / FAQs">
-      <p class="lead">Pertanyaan dan persyaratan yang sering ditanyakan tentang layanan SAMSAT Tanjungpinang.</p>
+    <div class="hero" role="region" aria-label="Layanan / CORNER">
+  
     </div>
   </header>
 
   <main class="stage" role="main">
-    <section class="info-card" aria-labelledby="faqs-title">
-      <h2 id="faqs-title" class="faqs-title">FAQs</h2>
+    <section class="info-card" aria-labelledby="corner-title">
+      <h2 id="corner-title" class="corner-title">SAMSAT CORNER</h2>
+      <P class="content-box">Samsat Corner adalah layanan mini Samsat yang ditempatkan di lokasi-lokasi strategis seperti pusat perbelanjaan, kantor pemerintahan, dan area publik lainnya. Layanan ini dirancang untuk mendekatkan akses pembayaran pajak kendaraan bermotor kepada masyarakat, sehingga mereka tidak perlu repot mengunjungi kantor Samsat yang sering kali jauh dan penuh antrian. Fasilitas dan Layanan di Samsat Corner.</P>
 
-<a href="{{ route('lainnya.tanya-kami') }}" class="tanya-btn">
-    Tanya Kami
-</a>
 
-      <section class="faq-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
-        <div class="faq-box" tabindex="0">
-          <strong>Persyaratan pengurusan PKB Tahunan</strong>
-          Membawa KTP Alat Pemilik Kendaraan Bermotor  
-          STNK Asli   
-          BPKB  
+
+      <section class="corner-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
+        <div class="corner-box" tabindex="0">
+          <strong>Pembayaran Pajak Kendaraan Bermotor:</strong>
+          Samsat Corner melayani pembayaran pajak tahunan kendaraan bermotor dengan cepat dan efisien. Proses pembayaran yang sederhana dan tidak memakan waktu lama menjadi salah satu keunggulan utama layanan ini.  
         </div>
 
-        <div class="faq-box" tabindex="0">
-          <strong>Persyaratan pengurusan PKB 5 Tahun</strong>
-          KTP Alat Pemilik Kendaraan Bermotor  
-          STNK (Asli dan fotocopy)  
-          BPKB (Asli dan fotocopy)  
-          Surat Kuasa Dari Leasing / Badan Hukum  
-          - Salinan Akte Pendirian  
-          - Keterangan Domisili  
-          - Surat Kuasa  
+        <div class="corner-box" tabindex="0">
+          <strong>Informasi dan Konsultasi:</strong>
+          Petugas yang ramah dan profesional siap memberikan informasi dan konsultasi terkait administrasi kendaraan bermotor, seperti cara perpanjangan STNK, perubahan data kepemilikan, dan lain-lain.  
         </div>
 
-        <div class="faq-box" tabindex="0">
-          <strong>Persyaratan pengurusan BBN KB</strong>
-          KTP Alat Pemilik Kendaraan Bermotor  
-          KTP penyertai kendaraan bermotor (KTP pembeli)  
-          STNK asli dan fotocopy  
-          BPKB asli dan fotocopy  
-          Kwitansi pembelian bermaterai  
-          Badan Hukum  
-          - Salinan Akte Pendirian  
-          - Keterangan Domisili  
-          - Surat Kuasa  
+        <div class="corner-box" tabindex="0">
+          <strong>Pembayaran Non-Tunai:</strong>
+          Untuk meningkatkan kenyamanan, Samsat Corner menyediakan opsi pembayaran non-tunai melalui kartu debit/kredit dan aplikasi pembayaran digital. Hal ini mempermudah masyarakat yang tidak membawa uang tunai.
         </div>
     </section>
   </main>
