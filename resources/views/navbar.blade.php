@@ -96,13 +96,12 @@
             </li>
             <!-- Dropdown Lainnya -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{ Request::is('informasi') || Request::is('tentang') || Request::is('faq') ? 'active' : '' }}" 
-                   href="#" id="navbarDropdown" role="button">
+                <a class="nav-link dropdown-toggle {{ Request::is('informasi') || Request::is('faq') ? 'active' : '' }}" 
+                href="#" id="navbarDropdown" role="button">
                     Lainnya
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item {{ Request::is('informasi') ? 'active' : '' }}" href="{{ url('/informasi') }}">Informasi</a></li>
-                    <li><a class="dropdown-item {{ Request::is('tentang') ? 'active' : '' }}" href="{{ url('/tentang') }}">Tentang Kami</a></li>
                     <li><a class="dropdown-item {{ Request::is('faq') ? 'active' : '' }}" href="{{ url('/faq') }}">FAQ</a></li>
                 </ul>
             </li>

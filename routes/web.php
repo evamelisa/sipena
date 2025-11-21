@@ -22,10 +22,6 @@ Route::get('/informasi', function () {
     return view('Informasi');
 })->name('informasi');
 
-Route::get('/tentang', function () {
-    return view('Tentang');
-})->name('tentang');
-
 Route::get('/faq', function () {
     return view('Faq');
 })->name('faq');
