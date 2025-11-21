@@ -322,8 +322,109 @@ body {
     }
   }
 
+/*css halaman lainnya*/
+
+
 /* css halaman samsat corner*/
-    
-  
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem auto 4rem auto;
+  max-width: 800px;
+  background: white;
+  color: #000;
+  padding: 0 1rem;
+  text-align: center;
+  user-select: text;
+}
+nav.navbar {
+  display: inline-flex;
+  background-color: #0b1a5f;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(11, 26, 95, 0.4);
+}
+nav.navbar a {
+  padding: 0.75rem 2rem;
+  color: #c1c1c1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0 0 20px 20px;
+  transition: color 0.3s ease;
+}
+nav.navbar a:hover:not(.active) {
+  color: #f0c600;
+  cursor: pointer;
+}
+nav.navbar a.active {
+  background: white;
+  color: #0b1a5f;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(11, 26, 95, 0.7);
+  cursor: default;
+}
+.service-title {
+  background-color: #0b1a5f;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(11, 26, 95, 0.6);
+  user-select: none;
+}
+.content-box {
+  background-color: #0b1a5f;
+  border-radius: 30px;
+  padding: 2rem 3rem;
+  color: white;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(11, 26, 95, 0.6);
+  white-space: pre-line;
+  margin-bottom: 6rem;
+}
+footer {
+  border-top: 1px solid #ccc;
+  padding: 1.5rem 2rem;
+  color: #333;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  user-select: text;
+}
+footer div {
+  width: 45%;
+  text-align: left;
+}
+footer strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  nav.navbar {
+    width: 100vw;
+    justify-content: center;
+  }
+  .content-box {
+    padding: 1.5rem 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  footer div {
+    width: 100%;
+  }
+}
 
 /* css halaman lainnya */
