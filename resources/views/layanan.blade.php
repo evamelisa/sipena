@@ -140,18 +140,10 @@
             margin-top:-18px; 
             justify-items:center; 
         }
-        .service-card{ 
-            background:var(--card); 
-            border-radius:14px; 
-            padding:18px; 
-            box-shadow:0 12px 28px rgba(15,23,42,0.06); 
-            display:flex; gap:12px; 
-            align-items:center; 
-            min-height:110px; 
-            width:100%; 
-            max-width:320px; 
-            text-decoration: none;
-        }
+        .services-grid a{
+    text-decoration:none !important;
+    color:inherit !important;
+}
         .service-tile{
             display:flex;
             align-items:center;
@@ -171,7 +163,14 @@
         }
         .service-caption{ text-align:center; margin-top:10px; color:var(--muted); font-size:.95rem; }
 
-   
+        /* Efek kecil saat hover untuk desktop */
+@media (min-width: 700px) {
+  .service-tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.28);
+  }
+}
+    .service-tile strong{ display:block; margin-bottom:.5rem; font-weight:700; }
     </style>
 </head>
 <body>
