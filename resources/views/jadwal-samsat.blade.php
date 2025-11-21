@@ -11,27 +11,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f8ff;
-      padding: 40px;
-      color: #0b2a59;
-    }
+    :root {
+    --deep-1: #1e3a8a;
+    --deep-2: #3b82f6;
+  }
 
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8ff;
+    color: #0b2a59;
+  }
     .title {
       text-align: center;
       font-size: 28px;
       font-weight: 700;
       margin-bottom: 40px;
     }
-
-    /* Layout memanjang (1 kolom) */
+    .top-banner{
+      background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
+      color:#fff;
+      padding:28px 0 72px;
+      border-bottom-left-radius:88px;
+      border-bottom-right-radius:88px;
+      position:relative;
+      overflow:hidden;
+    }
+    /* Ubah layout jadi 2 kolom */
     .container-list {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 25px;
-      max-width: 800px;
+      max-width: 1300px;
       margin: auto;
+      margin-top: 40px;
     }
 
     .card {
@@ -72,8 +84,18 @@
 
 <body>
 
+<header class="top-banner" role="banner">
+  <div class="dec a" aria-hidden="true"></div>
+    <div class="dec b" aria-hidden="true"></div>
+    
+    @include('navbar')
+    <div class="container text-center">
+        <h1 class="fw-bold mb-3">JADWAL SAMSAT</h1>
+        <p class="mb-0">Informasi jadwal operasional layanan SAMSAT di Tanjungpinang.</p>
+    </div>
+</header>
 <section class="jadwal-section">
-  <h2 class="title">JADWAL SAMSAT</h2>
+
 
   <div class="container-list">
 
@@ -125,6 +147,8 @@
 
   </div>
 </section>
+
+@include('footer')
 
 </body>
 </html>
