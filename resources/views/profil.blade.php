@@ -21,7 +21,8 @@
         .top-banner{
             background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
             color:#fff;
-            padding:25px 0 45px;
+            padding:28px 0 72px;
+            margin-top: -35px;
             border-bottom-left-radius:88px;
             border-bottom-right-radius:88px;
             position:relative;
@@ -97,27 +98,6 @@
                 .section h2 { margin-bottom: 12px; }
                 .visi-text, .misi-list { text-align: left; }
             }
-
-            .footer-info{
-                max-width:900px;
-                margin:32px auto 24px auto;
-                display:flex;
-                justify-content:space-between;
-                gap:24px;
-                flex-wrap:wrap;
-                color:#222;
-                font-weight:600;
-                font-size:1.08rem;
-            }
-            .footer-info div{ flex-basis:45%; min-width:220px; }
-            .footer-info p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
-            @media (max-width:900px){
-                .section-definisi{max-width:98vw;}
-            }
-            @media (max-width:600px){
-                .footer-info{flex-direction:column;gap:8px;}
-                .visi-misi-row{grid-template-columns:1fr;}
-            }
         </style>
     </head>
     <body>
@@ -125,8 +105,8 @@
             <div class="dec a" aria-hidden="true"></div>
             <div class="dec b" aria-hidden="true"></div>
 
-    @include('navbar')
-    <div class="hero" role="region" aria-label="Layanan SAMSAT">
+    <div class="hero" role="region" aria-label="Profil SAMSAT">
+        @include('navbar')
         <h1>Profil SAMSAT Tanjungpinang</h1>
         <p class="top">
             Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.

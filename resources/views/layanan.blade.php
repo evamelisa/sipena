@@ -24,31 +24,14 @@
         .top-banner{
             background: linear-gradient(90deg,var(--deep-1) 0%, var(--deep-2) 100%);
             color:#fff;
-            padding:28px 0 62px;
+            padding:28px 0 72px;
+            margin-top: -13px;
             border-bottom-left-radius:88px;
             border-bottom-right-radius:88px;
             position:relative;
             overflow:hidden;
         }
-        .nav-pills-centered{ 
-            display:inline-flex; 
-            gap:.35rem; 
-            background: rgba(255,255,255,0.06); 
-            padding:6px 10px; 
-            border-radius:999px; 
-            box-shadow:0 8px 26px rgba(11,42,102,0.12); 
-        }
-        .nav-pills-centered .nav-link{ 
-            color:#fff; 
-            padding:.35rem .9rem; 
-            border-radius:30px; 
-            font-weight:600; 
-            font-size:.9rem; 
-            opacity:.98; 
-        }
-        .nav-pills-centered .nav-link.active{ 
-            background: rgba(255,255,255,0.12); 
-        }
+        
 
         .hero{ 
             text-align:center; 
@@ -67,7 +50,7 @@
         }
         .hero p.lead{ 
             margin:0 auto; 
-            max-width:820px; 
+            max-width:835px; 
             color:rgba(255,255,255,0.92); 
             line-height:1.5; 
             font-size:.95rem; 
@@ -118,7 +101,7 @@
         font-weight:700; 
         margin:6px 0 16px; 
         }
-        .info-left h4{ 
+        .info-left h2{ 
             color:var(--deep-1); 
             font-weight:700; 
             margin-bottom:.5rem; 
@@ -188,40 +171,7 @@
         }
         .service-caption{ text-align:center; margin-top:10px; color:var(--muted); font-size:.95rem; }
 
-        .footer-info{
-                max-width:900px;
-                margin:32px auto 24px auto;
-                display:flex;
-                justify-content:space-between;
-                gap:24px;
-                flex-wrap:wrap;
-                color:#222;
-                font-weight:600;
-                font-size:1.08rem;
-            }
-            .footer-info div{ flex-basis:45%; min-width:220px; }
-            .footer-info p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
-            @media (max-width:900px){
-                .section-definisi{max-width:98vw;}
-            }
-            @media (max-width:600px){
-                .footer-info{flex-direction:column;gap:8px;}
-                .visi-misi-row{grid-template-columns:1fr;}
-            }
-
-        /* responsive */
-        @media (max-width:991px){
-            .services-grid{ grid-template-columns:repeat(2,1fr); gap:18px; }
-            .hero h1{ font-size:1.25rem; }
-            .info-card{ margin-top:-48px; padding:18px; }
-            .service-tile{ width:140px; height:140px; font-size:.88rem; }
-        }
-        @media (max-width:575px){
-            .services-grid{ grid-template-columns:1fr; }
-            .nav-pills-centered{ transform:scale(.95); }
-            .hero p.lead{ font-size:.9rem; }
-            .service-card{ max-width:520px; }
-        }
+   
     </style>
 </head>
 <body>
@@ -230,18 +180,8 @@
     <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
 
-    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
-        <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="{{ url('/beranda') }}">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/layanan') }}">Layanan</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
-            </ul>
-        </div>
-    </div>
-
     <div class="hero" role="region" aria-label="Layanan SAMSAT">
+        @include('navbar')
         <h1>Layanan SAMSAT Tanjungpinang</h1>
         <p class="lead">
             Layanan yang disediakan UPTD SAMSAT TANJUNGPINANG untuk masyarakat: pendaftaran kendaraan, penerbitan STNK, balik nama, pengurusan denda, dan layanan administrasi lainnya. Pilih layanan untuk informasi lebih lengkap.
@@ -260,8 +200,8 @@
 
         <!-- layanan tiles (disesuaikan agar mirip desain yang dikirim) -->
         <div class="services-grid mt-4" role="list" aria-label="Daftar layanan utama">
-            <a role="listitem" class="service-card" href="{{ route('layanan.kantor-samsat') }}" title="Kantor Samsat">
-                <div class="service-tile" aria-hidden="true">KANTOR<br>SAMSAT</div>
+            <a role="listitem" class="service-card" href="{{ route('layanan.samsat-keliling') }}" title="Kantor Samsat">
+                <div class="service-tile" aria-hidden="true">SAMSAT<br>KELILING</div>
             </a>
 
             <a role="listitem" class="service-card" href="{{ route('layanan.samsat-corner') }}" title="Samsat Corner">
@@ -272,8 +212,8 @@
                 <div class="service-tile" aria-hidden="true">SAMSAT<br>BERGERAK</div>
             </a>
 
-            <a role="listitem" class="service-card" href="{{ route('layanan.samsat-keliling') }}" title="Samsat Keliling">
-                <div class="service-tile" aria-hidden="true">SAMSAT<br>KELILING</div>
+            <a role="listitem" class="service-card" href="{{ route('layanan.kantor-samsat') }}" title="Samsat Keliling">
+                <div class="service-tile" aria-hidden="true">KANTOR<br>SAMSAT</div>
             </a>
 
             <a role="listitem" class="service-card" href="{{ route('layanan.pelantar-emas') }}" title="Pelantar Emas">
@@ -287,21 +227,7 @@
 
     </section>
 </main>
-
-<footer class="footer-info" aria-label="Informasi kontak dan jam layanan">
-    <div>
-    <p class=""><strong>Hubungi Kami</strong></p>
-    <p>UPTD PPD TANJUNGPINANG</p>
-    <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-    <p>(0771) 21581</p>
-    </div>
-    <div>
-    <p><strong>Jam Layanan</strong></p>
-    <p>Senin - Jumat : 08.00 - 15.00</p>
-    <p>Sabtu : 08.00 - 12.00</p>
-    <p>uptdppinang@gmail.com</p>
-    </div>
-</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+@include('footer')
 </body>
 </html>
