@@ -27,27 +27,6 @@
             position:relative;
             overflow:hidden;
         }
-        
-        .nav-pills-centered{ 
-            display:inline-flex; 
-            gap:.35rem; 
-            background: rgba(255,255,255,0.06); 
-            padding:6px 10px; 
-            border-radius:999px; 
-            box-shadow:0 8px 26px rgba(11,42,102,0.12); 
-        }
-        .nav-pills-centered .nav-link{
-            color:#fff;
-            padding:.35rem .9rem;
-            border-radius:30px;
-            font-weight:600;
-            font-size:1.08rem;
-            opacity:.98;
-        }
-        .nav-pills-centered .nav-link.active{
-            background: rgba(255,255,255,0.12); 
-        }
-            
             .hero{ 
             text-align:center; 
             max-width:1100px; 
@@ -143,22 +122,11 @@
     </head>
     <body>
         <header class="top-banner" role="banner">
+            <div class="dec a" aria-hidden="true"></div>
+            <div class="dec b" aria-hidden="true"></div>
 
-    <div class="dec a" aria-hidden="true"></div>
-    <div class="dec b" aria-hidden="true"></div>
-
-    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
-        <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="{{ url('/beranda') }}">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/profil') }}">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
-            </ul>
-        </div>
-    </div>
-
-            <div class="hero" role="region" aria-label="Layanan SAMSAT">
+    @include('navbar')
+    <div class="hero" role="region" aria-label="Layanan SAMSAT">
         <h1>Profil SAMSAT Tanjungpinang</h1>
         <p class="top">
             Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.
@@ -191,20 +159,9 @@
             </div>
         </div>
         </main>
-        <footer class="footer-info">
-            <div>
-                <p><strong>Hubungi Kami</strong></p>
-                <p>UPTD PPD TANJUNGPINANG</p>
-                <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-                <p>(0771) 21581</p>
-            </div>
-            <div>
-                <p><strong>Jam Layanan</strong></p>
-                <p>Senin - Jumat : 08.00 - 15.00</p>
-                <p>Sabtu : 08.00 - 12.00</p>
-                <p>uptdppinang@gmail.com</p>
-            </div>
-        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    @include('footer')
+
     </body>
     </html>
