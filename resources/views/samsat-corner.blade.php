@@ -37,29 +37,7 @@
       position:relative;
       overflow:hidden;
     }
-    .nav-pills-centered{ 
-      display:inline-flex; 
-      gap:.35rem; 
-      background: rgba(255,255,255,0.06); 
-      padding:6px 10px; 
-      border-radius:999px; 
-      box-shadow:0 8px 26px rgba(11,42,102,0.12);
-    }
-    .nav-pills-centered .nav-link{ 
-      color:#fff; 
-      padding:.35rem .9rem; 
-      border-radius:30px; 
-      font-weight:600; 
-      font-size:.9rem; 
-      opacity:.98; 
-    }
-    .nav-pills-centered .nav-link.active{ 
-      background: rgba(255,255,255,0.12); 
-    }
-    .dec { position:absolute; border-radius:50%; filter:blur(8px); opacity:.12; z-index:1; pointer-events:none; }
-    .dec.a { width:240px; height:240px; background:var(--accent); right:28px; top:-40px; transform:rotate(12deg); }
-    .dec.b { width:120px; height:120px; background:rgba(255,255,255,0.08); left:18px; top:-20px; }
-
+   
     /* content card */
     .stage{ max-width:1350px; margin:0 auto 48px; padding:18px; position:relative; }
     .info-card{
@@ -101,26 +79,6 @@
     }
     .corner-box strong{ display:block; margin-bottom:.5rem; font-weight:700; }
 
-    .footer-info{
-                max-width:900px;
-                margin:32px auto 24px auto;
-                display:flex;
-                justify-content:space-between;
-                gap:24px;
-                flex-wrap:wrap;
-                color:#222;
-                font-weight:600;
-                font-size:1.08rem;
-            }
-            .footer-info div{ flex-basis:45%; min-width:220px; }
-            .footer-info p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
-            @media (max-width:900px){
-                .section-definisi{max-width:98vw;}
-            }
-            @media (max-width:600px){
-                .footer-info{flex-direction:column;gap:8px;}
-                .visi-misi-row{grid-template-columns:1fr;}
-            }
   </style>
 </head>
 <body>
@@ -129,16 +87,7 @@
     <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
 
-    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
-      <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-        <ul class="nav mb-0">
-          <li class="nav-item"><a class="nav-link" href="{{ url('/beranda') }}">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-          <li class="nav-item"><a class="nav-link active" href="{{ url('/layanan') }}">Layanan</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ url('/lainnya') }}">Lainnya</a></li>
-        </ul>
-      </div>
-    </div>
+    @include('navbar')
 
     <div class="hero" role="region" aria-label="Layanan / CORNER">
   
@@ -148,7 +97,7 @@
   <main class="stage" role="main">
     <section class="info-card" aria-labelledby="corner-title">
       <h2 id="corner-title" class="corner-title">SAMSAT CORNER</h2>
-      <P class="content-box">Samsat Corner adalah layanan mini Samsat yang ditempatkan di lokasi-lokasi strategis seperti pusat perbelanjaan, kantor pemerintahan, dan area publik lainnya. Layanan ini dirancang untuk mendekatkan akses pembayaran pajak kendaraan bermotor kepada masyarakat, sehingga mereka tidak perlu repot mengunjungi kantor Samsat yang sering kali jauh dan penuh antrian. Fasilitas dan Layanan di Samsat Corner.</P>
+      <P class="content-box">Samsat Corner merupakan layanan mini Samsat yang ditempatkan di lokasi-lokasi strategis seperti pusat perbelanjaan, kantor pemerintahan, dan area publik lainnya. Layanan ini dirancang untuk mendekatkan akses pembayaran pajak kendaraan bermotor kepada masyarakat, sehingga mereka tidak perlu repot mengunjungi kantor Samsat yang sering kali jauh dan penuh antrian. Berikut layanan yang ada pada Samsat Corner.</P>
 
 
 
@@ -168,23 +117,10 @@
           Untuk meningkatkan kenyamanan, Samsat Corner menyediakan opsi pembayaran non-tunai melalui kartu debit/kredit dan aplikasi pembayaran digital. Hal ini mempermudah masyarakat yang tidak membawa uang tunai.
         </div>
     </section>
+
   </main>
 
-  <footer class="footer-info" aria-label="Informasi kontak dan jam layanan">
-    <div>
-      <p><strong>Hubungi Kami</strong></p>
-      <p>UPTD PPD TANJUNGPINANG</p>
-      <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-      <p>(0771) 21581</p>
-    </div>
-    <div>
-      <p><strong>Jam Layanan</strong></p>
-      <p>Senin - Jumat : 08.00 - 15.00</p>
-      <p>Sabtu : 08.00 - 12.00</p>
-      <p>uptdppinang@gmail.com</p>
-    </div>
-  </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+@include('footer')
 </body>
 </html>

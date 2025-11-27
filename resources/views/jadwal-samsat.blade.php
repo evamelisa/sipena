@@ -31,10 +31,33 @@
       background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
       color:#fff;
       padding:28px 0 72px;
+      margin-top: -10px;
       border-bottom-left-radius:88px;
       border-bottom-right-radius:88px;
       position:relative;
       overflow:hidden;
+    }
+    .hero{ 
+      text-align:center; 
+      max-width:1100px; 
+      margin:10px auto 0; 
+      padding:0 16px; 
+      position:relative; 
+      z-index:2; 
+    }
+    .hero h1{ 
+      margin:20px 0; 
+      font-size:1.6rem; 
+      font-weight:700; 
+      color:#fff; 
+    }
+    .hero p.lead{ 
+      margin:0 auto; 
+      margin-top: 18px;
+      max-width:850px; 
+      color:rgba(255,255,255,0.92); 
+      line-height:1.5; 
+      font-size:.95rem; 
     }
     /* Ubah layout jadi 2 kolom */
     .container-list {
@@ -88,10 +111,11 @@
   <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
     
-    @include('navbar')
-    <div class="container text-center">
-        <h1 class="fw-bold mb-3">JADWAL SAMSAT</h1>
-        <p class="mb-0">Informasi jadwal operasional layanan SAMSAT di Tanjungpinang.</p>
+    
+    <div class="hero" role="region" aria-label="Jadwal SAMSAT">
+      @include('navbar')
+      <h1>Jadwal Pelayanan SAMSAT Tanjungpinang</h1>
+      <p class="lead">Berikut adalah jadwal operasional dari berbagai layanan kantor SAMSAT di Tanjungpinang untuk memudahkan Anda dalam merencanakan kunjungan.</p>
     </div>
 </header>
 <section class="jadwal-section">
