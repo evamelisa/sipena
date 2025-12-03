@@ -90,13 +90,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('layanan') ? 'active' : '' }}" href="{{ url('/layanan') }}">
+                <a class="nav-link {{ Request::is('layanan*') ? 'active' : '' }}" href="{{ url('/layanan') }}">
                     Layanan
                 </a>
             </li>
             <!-- Dropdown Lainnya -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle {{ Request::is('informasi') || Request::is('faq') ? 'active' : '' }}" 
+                <a class="nav-link dropdown-toggle {{ Request::is('lainnya*') ? 'active' : '' }}" 
                 href="#" id="navbarDropdown" role="button">
                     Lainnya
                 </a>
