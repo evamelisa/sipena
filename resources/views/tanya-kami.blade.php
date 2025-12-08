@@ -15,197 +15,284 @@
             --card:#ffffff;
             --muted:#6b7a90;
         }
-        *{box-sizing:border-box}
-        body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-        .top-banner{
-            background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
-            color:#fff;
-            padding:28px 0 72px;
-            border-bottom-left-radius:88px;
-            border-bottom-right-radius:88px;
-            position:relative;
-            overflow:hidden;
+        *{box-sizing:border-box;margin:0;padding:0;}
+        body{
+            font-family:'Poppins',sans-serif;
+            background:var(--bg);
+            color:#233;
+            overflow-x:hidden;
         }
-        .nav-pills-centered{
-            display:inline-flex;
-            gap:.35rem;
-            background: rgba(255,255,255,0.06);
-            padding:6px 10px;
-            border-radius:999px;
-            box-shadow:0 8px 26px rgba(11,42,102,0.12);
 
-        }
-        .nav-pills-centered .nav-link{
+        
+        /* Header Banner */
+        .top-banner{
+            background: linear-gradient(135deg, var(--deep-1) 0%, var(--deep-2) 100%);
             color:#fff;
-            padding:.35rem .9rem;
-            border-radius:30px;
-            font-weight:600;
-            font-size:.9rem;
-            opacity:.98;
+            padding:40px 0 100px;
+            position:relative;
+            overflow:visible;
         }
-        .nav-pills-centered .nav-link.active{
-            background: rgba(255,255,255,0.12); 
-            border:2px solid #000000707505;
+        .top-banner::before{
+            content:'';
+            position:absolute;
+            top:-30%;
+            right:-10%;
+            width:500px;
+            height:500px;
+            background:rgba(255,255,255,0.04);
+            border-radius:50%;
+            animation:float 18s infinite ease-in-out;
         }
+        .top-banner::after{
+            content:'';
+            position:absolute;
+            bottom:-20%;
+            left:-8%;
+            width:350px;
+            height:350px;
+            background:rgba(255,255,255,0.03);
+            border-radius:50%;
+            animation:float 14s infinite ease-in-out reverse;
+        }
+        @keyframes float{
+            0%,100%{transform:translateY(0) rotate(0deg);}
+            50%{transform:translateY(-25px) rotate(3deg);}
+        }
+        
         .hero-title{
             text-align:center;
-            font-size:1.85rem;
+            font-size:2.5rem;
             font-weight:700;
-            letter-spacing:.5px;
-            margin-top:32px;
-            margin-bottom:0;
-            color: #0b2a66;
-        }
-        .section-form{
-            margin:0 auto;
-            max-width:1000px;
-            margin-top:24px;
-            margin-bottom:18px;
+            letter-spacing:1px;
+            margin-top:40px;
+            color:#fff;
+            text-shadow:0 4px 20px rgba(0,0,0,0.15);
             position:relative;
             z-index:2;
         }
+        
+/* Form Section */
+        .section-form{
+            margin:0 auto;
+            max-width:1100px;
+            margin-top:-50px;
+            margin-bottom:60px;
+            position:relative;
+            z-index:3;
+            padding:0 20px;
+        }
         .form-card{
-            background:var(--deep-2);
-            color:#ffffff;
-            border-radius:18px;
-            padding:28px 28px 18px 28px;
-            box-shadow:0 8px 32px rgba(11,42,102,0.10);
-            font-size:1.08rem;
-            margin-bottom:0;
+            background:#ffffff;
+            border-radius:30px;
+            padding:50px 60px;
+            box-shadow:0 20px 60px rgba(11,42,102,0.15);
+            position:relative;
+            overflow:hidden;
+            border:1px solid rgba(108,124,240,0.1);
+            margin-top: 80px;
         }
         .form-card h5{
             font-weight:700;
-            font-size:1.15rem;
-            margin-bottom:18px;
-            text-align:left;
-            color:#fff;
-            letter-spacing:.5px;
+            font-size:1.8rem;
+            margin-bottom:35px;
+            text-align:center;
+            color:var(--deep-1);
+            letter-spacing:0.5px;
+            position:relative;
+            z-index:1;
+            padding-bottom:15px;
         }
-        .form-label{font-weight:600;color:#fff;}
+        .form-card h5::after{
+            content:'';
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            width:80px;
+            height:4px;
+            background:linear-gradient(90deg, var(--deep-1), var(--accent));
+            border-radius:2px;
+        }
+        .form-group-custom{
+            margin-bottom:25px;
+            position:relative;
+            z-index:1;
+        }
+        .form-label{
+            font-weight:600;
+            color:var(--deep-1);
+            margin-bottom:8px;
+            font-size:0.95rem;
+            display:block;
+        }
         .form-select, .form-control{
-            border-radius:6px;
-            border:1px solid #dbe9ff;
-            margin-bottom:12px;
+            border-radius:12px;
+            border:2px solid #e1e8f5;
+            padding:12px 18px;
             font-size:1rem;
-            background:#fff;
+            background:#f8faff;
             color:#233;
+            transition:all 0.3s ease;
+            width:100%;
         }
         .form-control:focus, .form-select:focus{
             border-color:var(--accent);
-            box-shadow:0 0 0 2px #6c7cf0;
+            background:#fff;
+            box-shadow:0 0 0 4px rgba(108,124,240,0.1);
+            outline:none;
+        }
+        .form-control:hover, .form-select:hover{
+            border-color:var(--accent);
+            background:#fff;
+        }
+        textarea.form-control{
+            resize:vertical;
+            min-height:120px;
+        }
+        .form-btn-wrapper{
+            text-align:center;
+            margin-top:35px;
         }
         .form-btn{
-            background:var(--deep-1);
+            background:linear-gradient(135deg, var(--deep-1), var(--deep-2));
             color:#fff;
             border:none;
-            border-radius:6px;
-            padding:8px 24px;
+            border-radius:12px;
+            padding:14px 50px;
             font-weight:600;
-            font-size:1rem;
-            margin-top:8px;
+            font-size:1.1rem;
             cursor:pointer;
-            transition:background .2s;
+            transition:all 0.3s ease;
+            box-shadow:0 8px 20px rgba(11,42,102,0.25);
+            position:relative;
+            overflow:hidden;
         }
-        .form-btn:hover{background:var(--accent);}
-        .footer-info{
-            max-width:900px;
-            margin:32px auto 24px auto;
-            display:flex;
-            justify-content:space-between;
-            gap:24px;
-            flex-wrap:wrap;
-            color:#222;
-            font-weight:600;
-            font-size:1.08rem;
+        .form-btn::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition:left 0.5s;
         }
-        .footer-info div{ flex-basis:45%; min-width:220px; }
-        .footer-info p{ margin:.2rem 0; font-weight:400; color:var(--muted); }
-        @media (max-width:900px){
-            .section-form{max-width:98vw;}
+        .form-btn:hover::before{
+            left:100%;
         }
-        @media (max-width:600px){
-            .footer-info{flex-direction:column;gap:8px;}
+        .form-btn:hover{
+            transform:translateY(-3px);
+            box-shadow:0 12px 30px rgba(11,42,102,0.35);
+        }
+        .form-btn:active{
+            transform:translateY(-1px);
+        }
+        
+        /* Info Icon */
+        .info-icon{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:50px;
+            height:50px;
+            background:linear-gradient(135deg, var(--accent), var(--deep-2));
+            border-radius:50%;
+            margin:0 auto 20px;
+            box-shadow:0 8px 20px rgba(108,124,240,0.3);
+        }
+        .info-icon svg{
+            width:26px;
+            height:26px;
+            fill:#fff;
+        }
+        
+        /* Info Icon */
+        .info-icon{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            width:50px;
+            height:50px;
+            background:linear-gradient(135deg, var(--accent), var(--deep-2));
+            border-radius:50%;
+            margin:0 auto 20px;
+            box-shadow:0 8px 20px rgba(108,124,240,0.3);
+        }
+        .info-icon svg{
+            width:26px;
+            height:26px;
+            fill:#fff;
+        }   
+        /* Responsive */
+        @media (max-width:768px){
+            .hero-title{font-size:1.8rem;margin-top:30px;}
+            .form-card{padding:35px 25px;}
+            .form-card h5{font-size:1.5rem;}
+            .form-btn{padding:12px 35px;font-size:1rem;}
         }
     </style>
 </head>
 <body>
     <header class="top-banner" role="banner">
-    <div class="dec a" aria-hidden="true"></div>
-    <div class="dec b" aria-hidden="true"></div>
-
-    <div class="d-flex justify-content-center" style="padding-top:6px; position:relative; z-index:2;">
-    <div class="nav-pills-centered" role="navigation" aria-label="Menu utama">
-        <ul class="nav mb-0">
-        <li class="nav-item"><a class="nav-link" href="{{ url('/beranda') }}">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url('/profil') }}">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url('/layanan') }}">Layanan</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ url('/lainnya') }}">Lainnya</a></li>
-        </ul>
-    </div>
-    </div>
-    </header>
-    <main class="stage" role="main">
+        @include('navbar')
         <div class="hero-title">Layanan Aspirasi dan Pengaduan Rakyat</div>
-        <div style="text-align:center;margin:8px 0 18px 0;font-size:1.5rem;color:var(--deep-2);">
-        </div>
+    </header>
+    
+    <main role="main">
         <section class="section-form">
             <form class="form-card" method="POST" action="#">
+                <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                </div>
                 <h5>Sampaikan Laporan Anda</h5>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="klasifikasi" class="form-label">Pilih Klasifikasi Laporan</label>
                     <select id="klasifikasi" name="klasifikasi" class="form-select">
                         <option value="Pengaduan">Pengaduan</option>
                         <option value="Aspirasi">Aspirasi</option>
                     </select>
                 </div>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required />
+                    <input type="email" id="email" name="email" class="form-control" placeholder="contoh@email.com" required />
                 </div>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="judul" class="form-label">Judul Laporan Anda</label>
-                    <input type="text" id="judul" name="judul" class="form-control" required />
+                    <input type="text" id="judul" name="judul" class="form-control" placeholder="Masukkan judul laporan" required />
                 </div>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="isi" class="form-label">Ketik Isi Laporan Anda</label>
-                    <textarea id="isi" name="isi" class="form-control" rows="4" required></textarea>
+                    <textarea id="isi" name="isi" class="form-control" rows="4" placeholder="Jelaskan laporan Anda secara detail..." required></textarea>
                 </div>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="tanggal" class="form-label">Pilih Tanggal</label>
                     <input type="date" id="tanggal" name="tanggal" class="form-control" required />
                 </div>
-                <div class="mb-2">
+                
+                <div class="form-group-custom">
                     <label for="layanan" class="form-label">Pilih Layanan</label>
                     <select id="layanan" name="layanan" class="form-select">
                         <option value="Kantor Samsat">Kantor Samsat</option>
                         <option value="Samsat Corner">Samsat Corner</option>
                         <option value="Samsat Bergerak">Samsat Bergerak</option>
-                        <option value="Samsat Bergerak">Samsat Keliling</option>
+                        <option value="Samsat Keliling">Samsat Keliling</option>
                         <option value="Pelantar Emas">Pelantar Emas</option>
-
                     </select>
                 </div>
-                <button type="submit" class="form-btn">Laporkan</button>
+                
+                <div class="form-btn-wrapper">
+                    <button type="submit" class="form-btn">Laporkan</button>
+                </div>
             </form>
         </section>
     </main>
-    <footer class="footer-info">
-        <div>
-            <p><strong>Hubungi Kami</strong></p>
-            <p>UPTD PPD TANJUNGPINANG</p>
-            <p>Jalan Basuki Rahmad, No.10, Tanjungpinang</p>
-            <p>(0771) 21581</p>
-        </div>
-        <div>
-            <p><strong>Jam Layanan</strong></p>
-            <p>Senin - Jumat : 08.00 - 15.00</p>
-            <p>Sabtu : 08.00 - 12.00</p>
-            <p>uptdppinang@gmail.com</p>
-        </div>
-    </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    @include('footer')
 </body>
-</html>
-</head>
-<body>  
 </html>
