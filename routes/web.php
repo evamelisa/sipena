@@ -27,8 +27,11 @@ Route::get('/faq', function () {
 })->name('faq');
 
 Route::get('/laporan', function () {
-    return view('Laporan');
+    return view('laporan');
 })->name('laporan');
+
+// Terima submission laporan (POST)
+Route::post('/laporan', [\App\Http\Controllers\LaporanController::class, 'store']);
 
 Route::get('/layanan/kantor-samsat', function(){ 
     return view('kantor-samsat'); 
@@ -55,3 +58,10 @@ Route::get('/layanan/jadwal-samsat', function(){
 Route::get('/lainnya/tanya-kami', function(){ 
     return view('tanya-kami'); 
 })->name('lainnya.tanya-kami');
+
+// Admin Routes
+Route::get('/admin/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'show'])->name('admin.show');
+Route::delete('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.destroy');
+use App\Http\Controllers\LaporanController;
+
