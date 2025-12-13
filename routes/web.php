@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminManfaatController; // ⬅ tambah ini
 
 Route::get('/beranda', function () {
     return view('Beranda');
@@ -21,10 +23,6 @@ Route::get('/samsat-corner', function() {
 Route::get('/informasi', function () {
     return view('Informasi');
 })->name('informasi');
-
-Route::get('/tentang', function () {
-    return view('Tentang');
-})->name('tentang');
 
 Route::get('/faq', function () {
     return view('Faq');
@@ -59,3 +57,17 @@ Route::get('/layanan/jadwal-samsat', function(){
 Route::get('/lainnya/tanya-kami', function(){ 
     return view('tanya-kami'); 
 })->name('lainnya.tanya-kami');
+
+Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/register', [AuthController::class, 'registerPage']);
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/logout', [AuthController::class, 'logout']);
+
+// Admin Routes
+Route::get('/admin/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'show'])->name('admin.show');
+Route::delete('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.destroy');
+use App\Http\Controllers\LaporanController;

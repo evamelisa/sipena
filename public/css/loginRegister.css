@@ -1,0 +1,156 @@
+/* File: css/loginRegister.css (Diperbarui) */
+
+/* --- 1. Global Reset & Body Styling (TIDAK BERUBAH) --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif; 
+    background-color: #f0f2f7; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- 2. Notification Box (Tampilan Lebih Rapi dan Dark Theme) --- */
+.notification {
+    position: fixed;
+    top: 40px; /* Jarak dari atas */
+    right: 40px; /* Jarak dari kanan */
+    background-color: #092a69; 
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px; /* Sudut lebih melengkung */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.notification strong {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+/* --- 3. Wrapper & 4. Kotak Kartu (TIDAK BERUBAH) --- */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.auth-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* --- 5. Judul SIPENA (TIDAK BERUBAH) --- */
+.auth-card h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #092a69;
+    margin-top: 0;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* --- 6. Styling Form Elemen (Diperbarui di bagian input) --- */
+.auth-card form {
+    text-align: left;
+}
+
+.auth-card label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+    text-transform: capitalize;
+}
+
+/* 6A. Input Standar (Email dan Nama) - Background Abu-abu */
+.auth-card input[type="email"],
+.auth-card input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0; /* Warna abu-abu terang */
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+    transition: background-color 0.3s;
+    /* Tambahkan .auth-card input[type="name"] juga jika HTML login menggunakannya */
+}
+
+/* 6B. Input Highlighted (Password) - Background Ungu Muda */
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0; /* Warna Ungu Muda/Lavender */
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.auth-card input::placeholder {
+    color: #999;
+}
+
+.auth-card input:focus {
+    /* Fokus tetap sama untuk semua input */
+    background-color: #d1d1d1; 
+    outline: none;
+}
+
+/* --- 7. Tombol Masuk (auth-btn) (TIDAK BERUBAH) --- */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #092a69;
+    color: #092a69;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-btn:hover {
+    background-color: #a7a3b3;
+}
+
+/* --- 8. Link Daftar (auth-link) (TIDAK BERUBAH) --- */
+.auth-link {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.auth-link a {
+    color: #4b39a3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.auth-link a:hover {
+    color: #7b68ee;
+    text-decoration: underline;
+}
