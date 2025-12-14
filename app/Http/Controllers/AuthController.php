@@ -11,12 +11,12 @@ class AuthController extends Controller
 {
     public function loginPage()
     {
-        return view('login');
+        return view('admin.login');
     }
 
     public function registerPage()
     {
-        return view('register');
+        return view('admin.register');
     }
 
     public function register(Request $request)
@@ -24,20 +24,20 @@ class AuthController extends Controller
         $request->validate([
             'email' => 'required|email|unique:admin,email',
             'name' => 'required',
-            'password' => 'required'
+            'password' => 'required|min:6'
         ]);
 
         DB::table('admin')->insert([
-    'email' => $request->email,
-    'name' => $request->name,
-    'password' => Hash::make($request->password),
-    'role' => 'admin',
-    'created_at' => now(),
-    'updated_at' => now(),
-]);
+            'email' => $request->email,
+            'name' => $request->name,
+            'password' => Hash::make($request->password),
+            'role' => 'admin',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
 
         Session::flash('notification', ['type' => 'success', 'message' => 'Akun berhasil dibuat! Silakan login.']);
-        return redirect('/login');
+        return redirect('admin.login');
     }
 
     public function login(Request $request)
@@ -51,7 +51,7 @@ class AuthController extends Controller
 
         if (!$admin || !Hash::check($request->password, $admin->password)) {
             Session::flash('notification', ['type' => 'danger', 'message' => 'Nama atau Password salah']);
-            return redirect('/login');
+            return redirect('admin.login');
         }
 
         session([
@@ -60,12 +60,12 @@ class AuthController extends Controller
             'role' => $admin->role,
         ]);
 
-        return redirect('/manfaatAdmin');
+        return redirect('admin.dashboard');
     }
 
     public function logout()
     {
         session()->flush();
-        return redirect('/login');
+        return redirect('admin.login');
     }
 }

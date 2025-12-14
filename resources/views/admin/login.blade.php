@@ -3,9 +3,9 @@
 <head>  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
   <link rel="stylesheet" href="{{ asset('css/loginRegister.css') }}" />
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
 
@@ -23,7 +23,7 @@
     <div class="auth-card">
         <h2>SIPENA</h2>
 
-        <form action="/login" method="POST">
+        <form action="/admin/login" method="POST">
             @csrf
 
             <label>nama</label>
@@ -35,7 +35,7 @@
             <button class="auth-btn">Masuk</button>
         </form>
 
-        <p class="auth-link">Belum punya akun? <a href="/register">Daftar</a></p>
+        <p class="auth-link">Belum punya akun? <a href="/admin/register">Daftar</a></p>
     </div>
 </div>
 
