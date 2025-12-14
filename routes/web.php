@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminManfaatController; // ⬅ tambah ini
+use App\Http\Controllers\AdminController; // ⬅ tambah ini
+use App\Http\Controllers\LaporanController;
 
 Route::get('/beranda', function () {
     return view('Beranda');
@@ -29,8 +30,11 @@ Route::get('/faq', function () {
 })->name('faq');
 
 Route::get('/laporan', function () {
-    return view('Laporan');
+    return view('laporan');
 })->name('laporan');
+
+// Terima submission laporan (POST)
+Route::post('/laporan', [\App\Http\Controllers\LaporanController::class, 'store']);
 
 Route::get('/layanan/kantor-samsat', function(){ 
     return view('kantor-samsat'); 
@@ -58,16 +62,19 @@ Route::get('/lainnya/tanya-kami', function(){
     return view('tanya-kami'); 
 })->name('lainnya.tanya-kami');
 
-Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
-Route::post('/login', [AuthController::class, 'login']);
+Route::get('/admin/login', [AuthController::class, 'loginPage'])->name('login');
+Route::post('/admin/login', [AuthController::class, 'login']);
 
-Route::get('/register', [AuthController::class, 'registerPage']);
-Route::post('/register', [AuthController::class, 'register']);
+Route::get('/admin/register', [AuthController::class, 'registerPage']);
+Route::post('admin/register', [AuthController::class, 'register']);
 
 Route::get('/logout', [AuthController::class, 'logout']);
 
 // Admin Routes
-Route::get('/admin/dashboard', [\App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
-Route::get('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'show'])->name('admin.show');
-Route::delete('/admin/laporan/{id}', [\App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.destroy');
-use App\Http\Controllers\LaporanController;
+
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+    Route::get('/laporan/{laporan}', [AdminController::class, 'show'])->name('admin.show');
+    Route::delete('/laporan/{laporan}', [AdminController::class, 'destroy'])->name('admin.destroy');
+});
