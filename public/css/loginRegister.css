@@ -123,7 +123,7 @@ body, html {
     border: none;
     border-radius: 8px;
     background-color: #092a69;
-    color: #092a69;
+    color: #fff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -144,7 +144,7 @@ body, html {
 }
 
 .auth-link a {
-    color: #4b39a3;
+    color: #092a69;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
