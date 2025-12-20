@@ -3,79 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link rel="stylesheet" href="{{ asset('css/informasi.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
   <title>Informasi - UPTD SAMSAT TANJUNGPINANG</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
-  <style>
-    :root{
-      --deep-1:#0b2a66;
-      --deep-2:#163a8a;
-      --bg:#f4f6fb;
-      --card:#ffffff;
-      --muted:#6b7a90;
-    }
-    *{box-sizing:border-box}
-    body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-
-    .top-banner{
-      background: linear-gradient(90deg,var(--deep-1) 0%, var(--deep-2) 100%);
-      color:#fff;
-      padding:28px 0 72px;
-      border-bottom-left-radius:88px;
-      border-bottom-right-radius:88px;
-      position:relative;
-      overflow:visible;
-    }
-    .hero { 
-    text-align:center; 
-    max-width:1100px; 
-    margin:10px auto 0; 
-    padding:0 16px; 
-    position:relative; 
-    z-index:1 !important; 
-    pointer-events: none; /* Biarkan klik melewati hero */
-  }
-    .hero h1 { 
-    margin-top: 35px; 
-    font-size:1.6rem; 
-    font-weight:700; 
-    color:#fff; }
-    .hero p.lead { 
-    margin-left: 40px; 
-    margin-right: 40px; 
-    max-width:820px; 
-    color:rgba(255,255,255,0.92); 
-    line-height:1.5; 
-    font-size:.95rem; 
-  }
-
-    .section-card{
-      background:var(--card);
-      color:#233;
-      border-radius:18px;
-      margin:28px auto;
-      padding:28px;
-      box-shadow:0 8px 32px rgba(11,42,102,0.10);
-      max-width:1100px;
-    }
-    .section-card h2{ color:var(--deep-1); font-weight:700; margin-bottom:12px; }
-    .section-card h3{ color:var(--deep-1); font-weight:700; margin-top:18px; }
-    .section-card p{ text-align:justify; line-height:1.7; }
-    .section-list{ margin-left:1rem; }
-    .small-note{ font-style:italic; color:#555; }
-
-    @media (max-width:900px){
-      .hero p.lead{ margin-left:10px; margin-right:10px; }
-      .section-card{ padding:18px; margin:18px; }
-    }
-  </style>
 </head>
 <body>
 
   <header class="top-banner" role="banner">
-
     @include('navbar')
     <div class="hero" role="region" aria-label="Informasi">
       <h1>Panduan Administrasi Kendaraan</h1>
@@ -85,14 +24,14 @@
 
   <main>
     <section class="section-card" aria-labelledby="bayar-1">
-      <h2 id="bayar-1">Pembayaran Pajak 1 Tahunan</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="bayar-1">Pembayaran Pajak 1 Tahunan</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP (asli)</li>
         <li>SKPD (notice pajak) (asli)</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Membawa kelengkapan berkas.</li>
         <li>Mengambil Nomor Antrian.</li>
@@ -104,15 +43,15 @@
     </section>
 
     <section class="section-card" aria-labelledby="bayar-5">
-      <h2 id="bayar-5">Pembayaran Pajak 5 Tahunan</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="bayar-5">Pembayaran Pajak 5 Tahunan</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP (asli)</li>
         <li>SKPD (notice pajak) (asli)</li>
         <li>BPKB (asli dan fotocopy)</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Mengambil Formulir Pendaftaran di Loket Formulir dan mengisi data sesuai Berkas.</li>
@@ -124,13 +63,13 @@
     </section>
 
     <section class="section-card" aria-labelledby="duplikat-stnk">
-      <h2 id="duplikat-stnk">Proses Duplikat (Kehilangan) STNK</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="duplikat-stnk">Proses Duplikat (Kehilangan) STNK</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>KTP (asli)</li>
         <li>BPKB (asli dan fotocopy)</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Mengambil berkas Arsip Kendaraan Bermotor (diambil di Gudang Arsip POLRI yang ada di SAMSAT dimana kendaraan terdaftar).</li>
@@ -150,15 +89,15 @@
     </section>
 
     <section class="section-card" aria-labelledby="mutasi-keluar">
-      <h2 id="mutasi-keluar">Proses Mutasi Keluar (Cabut Berkas)</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="mutasi-keluar">Proses Mutasi Keluar (Cabut Berkas)</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP Pemilik baru (asli dan fotocopy)</li>
         <li>BPKB (asli dan fotocopy)</li>
         <li>Kwitansi pembelian kendaraan dari pemilik sebelumnya (bila ganti kepemilikan)</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Mengambil berkas Arsip Kendaraan Bermotor (diambil di Gudang Arsip POLRI yang ada di SAMSAT dimana kendaraan terdaftar).</li>
@@ -175,8 +114,8 @@
     </section>
 
     <section class="section-card" aria-labelledby="mutasi-masuk">
-      <h2 id="mutasi-masuk">Proses Mutasi Masuk</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="mutasi-masuk">Proses Mutasi Masuk</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP Pemilik baru (asli dan fotocopy)</li>
@@ -185,7 +124,7 @@
         <li>Arsip Kendaraan Bermotor (dari SAMSAT asal kendaraan terdaftar)</li>
         <li>Fiskal Antar Daerah</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Menuju Loket Mutasi untuk mendapatkan Rekomendasi dari POLDA setempat dan membayar PNBP (biaya BPKB, STNK & Plat Nomor).</li>
@@ -201,8 +140,8 @@
     </section>
 
     <section class="section-card" aria-labelledby="balik-nama">
-      <h2 id="balik-nama">Proses Balik Nama Kendaraan</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="balik-nama">Proses Balik Nama Kendaraan</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP Pemilik Baru (asli)</li>
@@ -210,7 +149,7 @@
         <li>BPKB (asli dan fotocopy)</li>
         <li>Kwitansi pembelian kendaraan dari pemilik sebelumnya</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Mengambil berkas Arsip Kendaraan Bermotor (diambil di Gudang Arsip POLRI yang ada di SAMSAT dimana kendaraan terdaftar).</li>
@@ -226,15 +165,15 @@
     </section>
 
     <section class="section-card" aria-labelledby="rubah-bentuk">
-      <h2 id="rubah-bentuk">Rubah Bentuk dan/atau Ganti Warna</h2>
-      <h3>Persyaratan</h3>
+      <h4 id="rubah-bentuk">Rubah Bentuk dan/atau Ganti Warna</h4>
+      <h5>Persyaratan</h5>
       <ol class="section-list">
         <li>STNK (asli)</li>
         <li>KTP (asli)</li>
         <li>SKPD (notice pajak) (asli)</li>
         <li>BPKB (asli dan fotocopy)</li>
       </ol>
-      <h3>Proses</h3>
+      <h5>Proses</h5>
       <ul class="section-list">
         <li>Menuju tempat Cek Fisik lalu bawa hasil Cek Fisik tersebut (kendaraan wajib dibawa untuk proses penggesekan nomor rangka dan nomor mesin yang disahkan oleh petugas yang berwenang).</li>
         <li>Mengambil berkas Arsip Kendaraan Bermotor (diambil di Gudang Arsip POLRI yang ada di SAMSAT dimana kendaraan terdaftar).</li>

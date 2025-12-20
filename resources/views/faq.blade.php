@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   <link rel="stylesheet" href="{{ asset('css/faq.css') }}" />
+  <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
 
   <title>FAQs - UPTD SAMSAT TANJUNGPINANG</title>
 
@@ -28,10 +29,6 @@
   <main class="stage" role="main">
     <section class="info-card" aria-labelledby="faqs-title">
       <h2 id="faqs-title" class="faqs-title">FAQs</h2>
-
-<a href="{{ route('lainnya.tanya-kami') }}" class="tanya-btn">
-    Tanya Kami
-</a>
 
       <section class="faq-container" aria-label="Persyaratan pengurusan dan pertanyaan umum">
         <div class="faq-box" tabindex="0">

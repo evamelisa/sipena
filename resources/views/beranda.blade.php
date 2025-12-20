@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>  
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <link rel="stylesheet" href="{{ asset('css/beranda.css') }}" />
-  <title>Beranda - SAMSAT Tanjungpinang</title>
+<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
+<title>Beranda - SAMSAT Tanjungpinang</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
 
 </head>
@@ -17,9 +18,6 @@
   <header class="top-banner" role="banner">
 
     @include('navbar')
-    <div class="dec a" aria-hidden="true"></div>
-    <div class="dec b" aria-hidden="true"></div>
-
     <div class="banner-content">
       <div class="hero-title">SAMSAT <br> TANJUNGPINANG</div>
       <div class="logo-row">
@@ -106,19 +104,21 @@
     </section>
 
     <section class="icon-section">
-      <div class="icon-box">
+    <a href="{{ route('informasi') }}" class="icon-box">
         <img src="{{ asset('image/icon-informasi.webp') }}" alt="Info Pelayanan" />
-        <div><a href="{{ route('informasi') }}" class="icon-link">Informasi<br>Lebih Lanjut</a></div>
-      </div>
-      <div class="icon-box">
+        <div class="icon-link">Informasi<br>Lebih Lanjut</div>
+    </a>
+  
+    <a href="{{ route('layanan.jadwal-samsat') }}" class="icon-box">
         <img src="{{ asset('image/icon-kalender.webp') }}" alt="Jadwal Samsat" />
-        <div><a href="{{ route('layanan.jadwal-samsat') }}" class="icon-link">Jadwal<br>Samsat</a></div>
-      </div>
-      <div class="icon-box">
+        <div class="icon-link">Jadwal<br>Samsat</div>
+    </a>
+
+    <a href="{{ route('laporan') }}" class="icon-box">
         <img src="{{ asset('image/icon-speaker.webp') }}" alt="Laporan" />
-        <div><a href="{{ route('laporan') }}" class="icon-link">Laporan</a></div>
-      </div>
-    </section>
+        <div class="icon-link">Laporan</div>
+    </a>
+</section>
   </main>
 
   @include('footer')

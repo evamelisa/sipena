@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/laporan.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
     
     <title>Layanan Aspirasi dan Pengaduan Rakyat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -38,7 +39,7 @@
         @endif
 
         <section class="section-form">
-            <form class="form-card" method="POST" action="{{ route('laporan.store') }}">
+            <form class="form-card" method="POST" action="{{ route('laporan') }}">
                 @csrf
                 
                 <div class="info-icon">
@@ -76,8 +77,10 @@
                 
                 <div class="form-group-custom">
                     <label for="tanggal" class="form-label">Pilih Tanggal</label>
-                    <input type="date" id="tanggal" name="tanggal" class="form-control" 
-                           value="{{ old('tanggal', date('Y-m-d')) }}" required />
+                    <input type="date" id="tanggal" name="tanggal"
+                    class="form-control"
+                            value="{{ old('tanggal', date('Y-m-d')) }}"
+                            required />
                 </div>
                 
                 <div class="form-group-custom">

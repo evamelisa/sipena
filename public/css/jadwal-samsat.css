@@ -17,15 +17,6 @@
     font-weight: 700;
     margin-bottom: 40px;
     }
-    .top-banner{
-    background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
-    color:#fff;
-    padding:28px 0 72px;
-    border-bottom-left-radius:88px;
-    border-bottom-right-radius:88px;
-    position:relative;
-    overflow:hidden;
-    }
     /* Ubah layout jadi 2 kolom */
     .container-list {
     display: grid;

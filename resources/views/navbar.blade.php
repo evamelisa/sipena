@@ -50,7 +50,7 @@
 
     /* --- DROPDOWN MENU STYLING --- */
     .dropdown-menu {
-        background: rgba(33, 40, 116, 0.95) !important;
+        background: rgba(33, 40, 116, 0.352) !important;
         backdrop-filter: blur(10px);
         color: white !important;
         border-radius: 12px;
@@ -134,7 +134,7 @@
 
                 <!-- LAYANAN -->
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('layanan') ? 'active' : '' }}" href="{{ url('/layanan') }}">
+                    <a class="nav-link {{ Request::is('layanan*') ? 'active' : '' }}" href="{{ url('/layanan') }}">
                         Layanan
                     </a>
                 </li>
@@ -142,21 +142,21 @@
                 <!-- DROPDOWN -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle 
-                        {{ Request::is('informasi') || Request::is('faq') ? 'active' : '' }}"
+                        {{ Request::is('informasi') || Request::is('faq*') ? 'active' : '' }}"
                         href="#" id="navbarDropdown" role="button">
                         Lainnya
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item {{ Request::is('informasi') ? 'active' : '' }}"
+                            <a class="dropdown-item {{ Request::is('informasi*') ? 'active' : '' }}"
                             href="{{ url('/informasi') }}">
                             Informasi
                             </a>
                         </li>
 
                         <li>
-                            <a class="dropdown-item {{ Request::is('faq') ? 'active' : '' }}"
+                            <a class="dropdown-item {{ Request::is('faq*') ? 'active' : '' }}"
                             href="{{ url('/faq') }}">
                             FAQ
                             </a>
