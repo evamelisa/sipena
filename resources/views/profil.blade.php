@@ -1,114 +1,26 @@
-    <!DOCTYPE html>
-    <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Profil SAMSAT Tanjungpinang</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-        <style>
-        :root{
-            --deep-1:#0b2a66;
-            --deep-2:#163a8a;
-            --bg:#f4f6fb;
-            --card:#ffffff;
-            --muted:#6b7a90;
-        }
-        *{box-sizing:border-box}
-        body{font-family:'Poppins',sans-serif;background:var(--bg);margin:0;color:#233;overflow-x:hidden;}
-        html, body { font-size: 15px; } /* font lebih besar */
+<!DOCTYPE html>
+<html lang="id">
+<head>  
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+<link rel="stylesheet" href="{{ asset('css/profil.css') }}">
+<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}?v=5">
 
-        .top-banner{
-            background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
-            color:#fff;
-            padding:28px 0 72px;
-            margin-top: -35px;
-            border-bottom-left-radius:88px;
-            border-bottom-right-radius:88px;
-            position:relative;
-            overflow:hidden;
-        }
-            .hero{ 
-            text-align:center; 
-            max-width:1100px; 
-            margin:35px auto 0; 
-            padding:0 16px; 
-            position:relative; 
-            z-index:2; 
-        }
-        .hero h1{ 
-            margin:15px 0; 
-            font-size:1.7rem; 
-            font-weight:800; 
-            color:#fff; 
-        }
-        .hero p.lead{ 
-            margin-left: 40px; 
-            margin-right: 40px;
-            max-width:820px; 
-            color:rgba(255,255,255,0.92); 
-            line-height:1.5; 
-            font-size:1.0rem; 
-        }
-            .section-definisi{
-                background: none;
-                margin: 7rem;
-                max-width:2000px;
-                margin-top:8px;
-                margin-bottom:18px;
-                position:relative;
-                z-index:2;
-            }
 
-            .definisi-card{
-                background:var(--card);
-                color:#233;
-                border-radius:40px;
-                margin:25px auto;
-                padding:28px;
-                box-shadow:0 8px 32px rgba(11,42,102,0.10);
-                font-size:1.08rem;
-                width:300%;
-                max-width:1300px;
-            
-                margin-bottom:17px;
-                font-size:1.08rem;
-                line-height:1.7;
-                color:#233;
-                text-align:justify;
-            }
+<title>Profil - SAMSAT Tanjungpinang</title>
 
-            .definisi-card h5 {
-                text-align: center;
-                font-weight: 700;
-            }
-.visi-box {
-    border-left: 6px solid #163a8a;
-}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 
-.misi-box {
-    border-left: 6px solid #4070b6;
-}
-
-            @media (max-width: 800px) {
-                .content-box {
-                    grid-template-columns: 1fr;
-                    padding: 1.2rem;
-                }
-                .section h2 { margin-bottom: 12px; }
-                .visi-text, .misi-list { text-align: left; }
-            }
-        </style>
     </head>
     <body>
         <header class="top-banner" role="banner">
-            <div class="dec a" aria-hidden="true"></div>
-            <div class="dec b" aria-hidden="true"></div>
+            @include('navbar')
 
     <div class="hero" role="region" aria-label="Profil SAMSAT">
-        @include('navbar')
         <h1>Profil SAMSAT Tanjungpinang</h1>
-        <p class="top">
+        <p class="lead">
             Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.
         </p>
     </div>
