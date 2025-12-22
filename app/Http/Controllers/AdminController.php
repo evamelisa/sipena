@@ -10,12 +10,27 @@ class AdminController extends Controller
     /**
      * Tampilkan dashboard admin
      */
-    public function dashboard()
+    public function dashboard(\Illuminate\Http\Request $request)
     {
-        // Ambil data laporan dari database dengan pagination (10 per halaman)
-        $laporan = Laporan::orderBy('created_at', 'desc')->paginate(10);
+        $q = $request->query('q');
 
-        return view('admin.dashboard', compact('laporan'));
+        $query = Laporan::query();
+
+        if ($q) {
+            $query->where(function($sub) use ($q) {
+                $sub->where('judul', 'like', "%{$q}%")
+                    ->orWhere('isi', 'like', "%{$q}%")
+                    ->orWhere('email', 'like', "%{$q}%")
+                    ->orWhere('klasifikasi', 'like', "%{$q}%")
+                    ->orWhere('layanan', 'like', "%{$q}%");
+            });
+        }
+
+        $laporan = $query->orderBy('created_at', 'desc')
+                         ->paginate(10)
+                         ->withQueryString();
+
+        return view('admin.dashboard', compact('laporan', 'q'));
     }
 
     /**

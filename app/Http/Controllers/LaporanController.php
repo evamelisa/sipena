@@ -8,15 +8,7 @@ use Illuminate\Http\Request;
 class LaporanController extends Controller
 {
     /**
-     * Tampilkan form laporan (opsional)
-     */
-    public function create()
-    {
-        return view('laporan');
-    }
-
-    /**
-     * Simpan laporan yang dikirim user
+     * Simpan laporan dari user (CREATE)
      */
     public function store(Request $request)
     {
@@ -29,16 +21,37 @@ class LaporanController extends Controller
             'tanggal' => 'nullable|date',
         ]);
 
-        $laporan = Laporan::create([
+        Laporan::create([
             'klasifikasi' => $validated['klasifikasi'],
             'email' => $validated['email'],
             'judul' => $validated['judul'],
             'isi' => $validated['isi'],
             'layanan' => $validated['layanan'] ?? null,
-            // if tanggal provided, save it; otherwise use today
-            'tanggal' => $validated['tanggal'] ?? date('Y-m-d'),
+            'tanggal' => $validated['tanggal'] ?? now()->toDateString(),
+            'status' => 'Baru',
         ]);
 
         return redirect()->back()->with('success', 'Laporan berhasil dikirim.');
+    }
+
+    /**
+     * Update laporan oleh admin (UPDATE)
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required',
+            'catatan_admin' => 'nullable|string',
+        ]);
+
+        $laporan = Laporan::findOrFail($id);
+
+        $laporan->update([
+    'status' => ucfirst(trim($request->status)),
+    'catatan_admin' => $request->catatan_admin
+]);
+
+
+        return redirect()->back()->with('message', 'Laporan berhasil diperbarui.');
     }
 }

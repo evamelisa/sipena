@@ -1,0 +1,80 @@
+:root {
+    --deep-1: #092a69;
+    --deep-2: #163a8a;
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --muted: #6b7a90;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    margin: 0;
+    color: #233;
+}
+.top-banner {
+    background: linear-gradient(90deg, var(--deep-1), var(--deep-2));
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.table-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+table th {
+    font-weight: 600;
+}
+.action-icons {
+    display: flex;
+    gap: 10px;
+}
+.btn-view,
+.btn-delete {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+}
+.btn-view {
+    background: #e7edff;
+    color: #092a69;
+}
+.btn-delete {
+    background: #fdeaea;
+    color: #dc3545;
+}
+
+/* Primary buttons (override Bootstrap) */
+.btn-primary {
+    background-color: #092a69 !important;
+    border-color: #092a69 !important;
+    color: #fff !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #071f52 !important;
+    border-color: #071f52 !important;
+    color: #fff !important;
+}
+.btn-primary:active {
+    background-color: #06183f !important;
+    border-color: #06183f !important;
+}
+
+/* Use the SAMSAT deep color for the page heading and modal detail header */
+.main-content section.mb-3 h3.fw-bold.text-primary {
+    color: #092a69 !important;
+}
+
+.modal-header.bg-primary {
+    background-color: #092a69 !important;
+}
