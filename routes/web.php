@@ -78,3 +78,11 @@ Route::prefix('admin')->group(function () {
     Route::get('/laporan/{laporan}', [AdminController::class, 'show'])->name('admin.show');
     Route::delete('/laporan/{laporan}', [AdminController::class, 'destroy'])->name('admin.destroy');
 });
+
+//route untuk link pindah halaman layanan
+Route::view('/samsat-keliling', 'samsat-keliling');
+Route::view('/samsat-corner', 'samsat-corner');
+Route::view('/samsat-bergerak', 'samsat-bergerak');
+Route::view('/kantor-samsat', 'kantor-samsat');
+Route::view('/pelantar-emas', 'pelantar-emas');
+Route::view('/jadwal-samsat', 'jadwal-samsat');

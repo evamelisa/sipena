@@ -1,0 +1,102 @@
+:root{
+            --deep-1:#0b2a66;
+            --deep-2:#163a8a;
+            --bg:#f4f6fb;
+            --card:#ffffff;
+            --muted:#6b7a90;
+        }
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:'Poppins',sans-serif;
+            background:var(--bg);
+            color:#233;
+            overflow-x:hidden;
+            font-size:15px;
+        }
+        .hero{ 
+  text-align:center; 
+  max-width:1100px; 
+  margin:10px auto 0; 
+  padding:0 40px; 
+  position:relative; 
+  z-index:2; 
+}
+.hero h1{ 
+  margin:15px 0; 
+  font-size:1.7rem; 
+  font-weight:800; 
+  color:#fff; 
+}
+/* Link di bawah judul SAMSAT KELILING */
+.samsat-links {
+    margin-top: 10px;
+    text-align: center;
+}
+.samsat-links a {
+    color: #ffffff;          /* PUTIH */
+    text-decoration: none;   /* hilangkan garis bawah */
+    font-weight: 500;
+    margin: 0 6px;
+    transition: 0.1s ease;
+}
+.samsat-links span {
+    color: #ffffff;
+    opacity: 0.6;
+}
+/* Efek hover */
+.samsat-links a:hover {
+  color: #163a8a;
+    text-decoration: underline;
+    opacity: 0.85;
+}
+        /* Content Section */
+        .content-wrapper{
+            max-width:1300px;
+            margin:40px auto;
+            padding:0 20px;
+        }
+
+        .content-card{
+            background:var(--card);
+            color:#233;
+            border-radius:25px;
+            padding:40px;
+            box-shadow:0 8px 32px rgba(11,42,102,0.10);
+            margin-bottom:30px;
+        }
+
+        .content-card h5,
+        .content-card h2{
+            text-align:center;
+            font-weight:700;
+            color:var(--deep-1);
+            margin-bottom:20px;
+            font-size:1.5rem;
+        }
+
+        .content-card p{
+            margin-bottom:15px;
+            font-size:1.08rem;
+            line-height:1.6;
+            text-align:justify;
+        }
+        /* Responsive */
+        @media (max-width:768px){
+            .hero{
+                padding:0 20px;
+            }
+            .hero h1{
+                font-size:1.4rem;
+            }
+            .content-card{
+                padding:25px;
+            }
+            .content-card h5,
+            .content-card h2{
+                font-size:1.3rem;
+            }
+        }
