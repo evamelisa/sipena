@@ -83,6 +83,13 @@
                     </a>
                     <figcaption>Pengurusan BPKB</figcaption>
                 </figure>
+                    <figure class="gallery-item">
+                    <a href="{{ asset('image/STNK.webp') }}" class="gallery-link" data-src="{{ asset('image/STNK.webp') }}" aria-label="Buka gambar ruang tunggu anak (di halaman)">
+                        <img src="{{ asset('image/STNK.webp') }}" alt="Ruang Tunggu Anak">
+                    </a>
+                    <figcaption>Pengurusan STNK</figcaption>
+                    </figure>
+                </figure>
                 <figure class="gallery-item">
                     <a href="{{ asset('image/kasir.webp.jpeg') }}" class="gallery-link" data-src="{{ asset('image/kasir.webp.jpeg') }}" aria-label="Buka gambar Loket Pembayaran (di halaman)">
                         <img src="{{ asset('image/kasir.webp.jpeg') }}" alt="Loket Pembayaran">
