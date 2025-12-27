@@ -3,10 +3,8 @@
 <head>  
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-<link rel="stylesheet" href="{{ asset('css/profil.css') }}">
-<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}?v=5">
-
+<link rel="stylesheet" href="{{ asset('css/Profil.css') }}">
+<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}">
 
 <title>Profil - SAMSAT Tanjungpinang</title>
 
@@ -25,22 +23,21 @@
         </p>
     </div>
         </header>
-            <section class="section-definisi">
-                <div class="definisi-card">
+            <section class="content-wrapper">
+                <div class="content-card">
                     <h5>Tentang SAMSAT</h5>
                     <p>Menurut Peraturan Presiden No 5 Tahun 2015 tentang Penyelenggaraan SAMSAT, SAMSAT sendiri merupakan sebuah rangkaian sistem yang bertujuan untuk menyelenggarakan tugas Bea Balik Nama Kendaraan Bermotor (BBNKB), registrasi serta identifikasi kendaraan bermotor, dan penagihan penerimaan pajak kendaraan bermotor dan biaya yang terkait.</p>
                     <p>Kepemilikan kendaraan bermotor wajib melakukan registrasi dan identifikasi kendaraan bermotor, membayar pajak kendaraan bermotor, dan membayar Sumbangan Wajib Dana Kecelakaan Lalu Lintas dan Angkutan Jalan (SWDKLLJ).</p>
                     <p>Registrasi dan identifikasi kendaraan bermotor dilakukan oleh Kepolisian Negara Republik Indonesia, pemungutan pajak kendaraan bermotor dan Bea Balik Nama Kendaraan Bermotor dilakukan oleh Pemerintah Daerah, dan pengelolaan SWDKLLJ dilakukan oleh PT Jasa Raharja (Persero) yang bertugas mengelola SWDKLLJ.</p>
                 </div>
-            </section>
-            <div class="definisi-card visi-box">
+            <div class="content-card visi-box">
             
                 <h2>VISI</h2>
                 <p>
                     Terwujudnya Badan Pendapatan Daerah sebagai Organisasi yang Profesional, Transparan, dan Akuntabel dalam rangka Peningkatan Pendapatan Daerah
                 </p>
             </div>
-            <div class="definisi-card misi-box">
+            <div class="content-card misi-box">
                 <h2>MISI</h2>
                 <ol class="misi-list">
                     <li>Meningkatnya Profesionalisme Aparatur dalam Rangka Peningkatan Pendapatan Daerah.</li>
@@ -50,6 +47,7 @@
                 </ol>
             </div>
         </div>
+    </section>
         </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

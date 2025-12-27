@@ -63,7 +63,7 @@ body{
   border-radius:14px;
   padding:30px;
   box-shadow:0 20px 48px rgba(15,23,42,0.08);
-  margin-top: 30px;
+  margin-top: 23px;
   position:relative;
   z-index:5;
 }
@@ -85,7 +85,7 @@ body{
   margin-top: 12px; 
 } 
 .samling-box{ 
-  background: #163a8a ; 
+  background: #092a69 ; 
   border: 1px solid rgba(11,26,95,0.06); 
   border-radius: 10px; /* slightly rounder but smaller */ 
   padding: 0.9rem 1rem; /* reduced padding to make boxes smaller */ 

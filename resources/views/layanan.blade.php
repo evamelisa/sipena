@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/layanan.css') }}" />
-<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}?v=5">
-
+    <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}?v=5">
 
     <title>Layanan - SAMSAT Tanjungpinang</title>
 
