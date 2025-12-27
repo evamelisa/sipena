@@ -11,12 +11,42 @@
     background: #f5f8ff;
     color: #0b2a59;
 	}
-    .title {
+.hero{ 
+  text-align:center; 
+  max-width:1100px; 
+  margin:10px auto 0; 
+  padding:0 40px; 
+  position:relative; 
+  z-index:2; 
+}
+.hero h1{ 
+  margin:15px 0; 
+  font-size:1.7rem; 
+  font-weight:800; 
+  color:#fff; 
+}
+/* Link di bawah judul SAMSAT KELILING */
+.samsat-links {
+    margin-top: 10px;
     text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    }
+}
+.samsat-links a {
+    color: #ffffff;          /* PUTIH */
+    text-decoration: none;   /* hilangkan garis bawah */
+    font-weight: 500;
+    margin: 0 6px;
+    transition: 0.1s ease;
+}
+.samsat-links span {
+    color: #ffffff;
+    opacity: 0.6;
+}
+/* Efek hover */
+.samsat-links a:hover {
+  color: #163a8a;
+    text-decoration: underline;
+    opacity: 0.85;
+}
     /* Ubah layout jadi 2 kolom */
     .container-list {
     display: grid;
@@ -27,14 +57,6 @@
     margin-top: 40px;
     }
 
-    .card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
-    border-left: 6px solid #1e3a8a;
-    width: 100%;
-    }
 .definisi-card{
     background: #ffffff;
     padding: 20px;
@@ -42,12 +64,14 @@
     box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
     border-left: 6px solid #1e3a8a;
     width: 100%;
-
-    /* POSISIKAN PAS DI TENGAH GRID */
-    grid-column: span 2;
-    justify-self: center;
-    max-width: 750px;
+    grid-template-columns: repeat(2, 1fr);
 }
+.center-card {
+    grid-column: span 2;     /* ambil 2 kolom */
+    justify-self: center;   /* posisikan ke tengah */
+    max-width: 750px;       /* biar tidak kepanjangan */
+}
+
 .samling-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

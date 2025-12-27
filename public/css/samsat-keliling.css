@@ -1,0 +1,103 @@
+:root{
+  --deep-1:#092a69;
+  --deep-2:#163a8a;
+  --accent:#6c7cf0;
+  --bg:#f4f6fb;
+  --card:#ffffff;
+  --muted:#6b7a90;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  margin:0;
+  color:#233;
+  font-size: 18px;
+}
+.hero{ 
+  text-align:center; 
+  max-width:1100px; 
+  margin:10px auto 0; 
+  padding:0 40px; 
+  position:relative; 
+  z-index:2; 
+}
+.hero h1{ 
+  margin:15px 0; 
+  font-size:1.7rem; 
+  font-weight:800; 
+  color:#fff; 
+}
+/* Link di bawah judul SAMSAT KELILING */
+.samsat-links {
+    margin-top: 10px;
+    text-align: center;
+}
+.samsat-links a {
+    color: #ffffff;          /* PUTIH */
+    text-decoration: none;   /* hilangkan garis bawah */
+    font-weight: 500;
+    margin: 0 6px;
+    transition: 0.1s ease;
+}
+.samsat-links span {
+    color: #ffffff;
+    opacity: 0.6;
+}
+/* Efek hover */
+.samsat-links a:hover {
+  color: #163a8a;
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+/* content card */
+.stage { 
+  max-width:1300px; 
+  margin:0 auto 48px; 
+  padding:18px; 
+  position:relative; 
+}
+.info-card{
+  background:var(--card);
+  border-radius:14px;
+  padding:30px;
+  box-shadow:0 20px 48px rgba(15,23,42,0.08);
+  margin-top: 30px;
+  position:relative;
+  z-index:5;
+}
+.samling-title{ text-align:center; 
+  color:var(--deep-1); 
+  font-weight:700; 
+  margin:6px 0 16px;
+  font-size: 2rem;
+}
+.content-box p { 
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.samling-container{ 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1rem; /* tighter grid spacing */ 
+  margin-top: 12px; 
+} 
+.samling-box{ 
+  background: #163a8a ; 
+  border: 1px solid rgba(11,26,95,0.06); 
+  border-radius: 10px; /* slightly rounder but smaller */ 
+  padding: 0.9rem 1rem; /* reduced padding to make boxes smaller */ 
+  font-size: 0.98rem; /* slightly smaller text */ 
+  line-height: 1.6; /* improve readability */ 
+  text-align: justify; 
+  color: #fff; 
+  box-shadow: 0 6px 12px rgba(11,26,95,0.06); /* subtler shadow */ 
+  white-space: pre-line; 
+}
+.samling-box strong { 
+  display: block; 
+  margin-bottom: 0.6rem; 
+  font-weight: 700; 
+  font-size: 1.02rem; /* slightly smaller heading inside box */ }

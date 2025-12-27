@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-  <link rel="stylesheet" href="{{ asset('css/faq.css') }}" />
-  <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/faq.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/top-banner.css') }}?v=5">
 
   <title>FAQs - UPTD SAMSAT TANJUNGPINANG</title>
 
@@ -17,10 +17,8 @@
 <body>
 
   <header class="top-banner" role="banner">
-    <div class="dec a" aria-hidden="true"></div>
-    <div class="dec b" aria-hidden="true"></div>
+    @include('navbar')
     
-@include('navbar')
     <div class="hero" role="region" aria-label="Lainnya / FAQs">
       <p class="lead">Pertanyaan dan persyaratan yang sering ditanyakan tentang layanan SAMSAT Tanjungpinang.</p>
     </div>
@@ -43,8 +41,11 @@
           - KTP Alat Pemilik Kendaraan Bermotor  
           - STNK (Asli dan fotocopy)  
           - BPKB (Asli dan fotocopy) / Surat Kuasa Dari Leasing
-          <strong>Badan Hukum</strong>
-          Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa  
+          - BPKB (Asli dan fotocopy) / Surat Kuasa Dari Leasing
+          <div class="badan-hukum">
+            <strong>Badan Hukum</strong>
+            <span class="badan-desc">Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa</span>
+          </div>
         </div>
 
         <div class="faq-box" tabindex="0">
@@ -54,8 +55,11 @@
           - STNK asli dan fotocopy  
           - BPKB asli dan fotocopy  
           - Kwitansi pembelian bermaterai  
-          <strong>Badan Hukum</strong>
-          Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa  
+          - Kwitansi pembelian bermaterai  
+          <div class="badan-hukum">
+            <strong>Badan Hukum</strong>
+            <span class="badan-desc">Salinan Akte Pendirian, Keterangan Domisili dan Surat Kuasa</span>
+          </div>
         </div>
 
         <div class="faq-box" tabindex="0">

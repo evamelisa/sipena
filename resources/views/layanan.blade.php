@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/layanan.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
     <title>Layanan - SAMSAT Tanjungpinang</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -15,10 +16,9 @@
 <body>
 
 <header class="top-banner" role="banner">
-
+    @include('navbar')
     <div class="dec a" aria-hidden="true"></div>
     <div class="dec b" aria-hidden="true"></div>
-@include('navbar')
     <div class="hero" role="region" aria-label="Layanan SAMSAT">
         <h1>Layanan SAMSAT Tanjungpinang</h1>
         <p class="lead">

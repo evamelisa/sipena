@@ -14,7 +14,7 @@
         left: 0;
         right: 0;
         z-index: 9999;
-        background: linear-gradient(135deg, #092a69 0%, #163a8a 100%);
+        background: #092a69;
         padding: 10px 0;
         box-shadow: 0 4px 20px rgba(11, 42, 102, 0.3);
         transition: all 0.3s ease;

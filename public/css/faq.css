@@ -13,18 +13,6 @@ body{
     margin:0;
     color:#233;
     }
-
-.top-banner{
-    background: linear-gradient(90deg,var(--deep-1),var(--deep-2));
-    color:#fff;
-    padding:28px 0 72px;
-    border-bottom-left-radius:88px;
-    border-bottom-right-radius:88px;
-    position:relative;
-    overflow:hidden;
-    }
-    
-
 .hero{ 
     text-align:center; 
     max-width:1100px; 
@@ -33,13 +21,13 @@ body{
     position:relative; 
     z-index:2; 
 }
-    .hero h1{ 
+.hero h1{ 
     margin:8px 0; 
     font-size:1.6rem; 
     font-weight:700; 
     color:#fff; 
     }
-    .hero p.lead{ 
+.hero p.lead{ 
     margin:0 auto; 
     margin-top: 30px;
     max-width:820px; 
@@ -47,30 +35,6 @@ body{
     line-height:1.50; 
     font-size:1.1rem; 
     }
-
-.dec { 
-    position:absolute; 
-    border-radius:50%; 
-    filter:blur(8px); 
-    opacity:.12; 
-    z-index:1; 
-    pointer-events:none; 
-}
-.dec.a { 
-    width:240px; 
-    height:240px; 
-    background:var(--accent); 
-    right:28px; 
-    top:-40px; 
-    transform:rotate(12deg); 
-}
-.dec.b { 
-    width:120px; 
-    height:120px; 
-    background:rgba(255,255,255,0.08); 
-    left:18px; 
-    top:-20px; 
-}
 
 /* content card */
 .stage { 
@@ -148,3 +112,26 @@ body{
     display:block; 
     margin-bottom: 0rem; 
     font-weight:700; }
+
+/* Spacing khusus untuk label "Badan Hukum" agar menempel ke teks bawah */
+.badan-hukum{
+    margin-top:0;
+    margin-bottom:0;
+} 
+.badan-hukum strong{ 
+    display:block;
+    margin-bottom:0;
+}
+.badan-hukum p{
+    margin:0;
+    color: #0b1a5f;
+}
+
+/* Deskripsi badan hukum sebagai inline block agar jarak bisa dikontrol lebih teliti */
+.badan-desc{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    line-height:1.15;
+    color: #0b1a5f;
+}

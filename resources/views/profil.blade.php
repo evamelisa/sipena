@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>  
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-<link rel="stylesheet" href="{{ asset('css/profil.css') }}" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil SAMSAT Tanjungpinang</title>
+    <link rel="stylesheet" href="{{ asset('css/Profil.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/top-banner.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="top-banner" role="banner">
+        @include('navbar')
 
-<title>Profil - SAMSAT Tanjungpinang</title>
+        <div class="hero" role="region" aria-label="Profil SAMSAT">
+            <h1>Profil SAMSAT Tanjungpinang</h1>
+            <p>
+                Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.
+            </p>
+        </div>
+    </header>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <main>
+        <div class="content-wrapper">
+            <!-- Tentang SAMSAT -->
+            <div class="content-card">
+                <h5>Tentang SAMSAT</h5>
+                <p>
+                    Menurut Peraturan Presiden No 5 Tahun 2015 tentang Penyelenggaraan SAMSAT, SAMSAT sendiri merupakan sebuah rangkaian sistem yang bertujuan untuk menyelenggarakan tugas Bea Balik Nama Kendaraan Bermotor (BBNKB), registrasi serta identifikasi kendaraan bermotor, dan penagihan penerimaan pajak kendaraan bermotor dan biaya yang terkait.
+                </p>
+                <p>
+                    Kepemilikan kendaraan bermotor wajib melakukan registrasi dan identifikasi kendaraan bermotor, membayar pajak kendaraan bermotor, dan membayar Sumbangan Wajib Dana Kecelakaan Lalu Lintas dan Angkutan Jalan (SWDKLLJ).
+                </p>
+                <p>
+                    Registrasi dan identifikasi kendaraan bermotor dilakukan oleh Kepolisian Negara Republik Indonesia, pemungutan pajak kendaraan bermotor dan Bea Balik Nama Kendaraan Bermotor dilakukan oleh Pemerintah Daerah, dan pengelolaan SWDKLLJ dilakukan oleh PT Jasa Raharja (Persero) yang bertugas mengelola SWDKLLJ.
+                </p>
+            </div>
 
-    </head>
-    <body>
-        <header class="top-banner" role="banner">
-            @include('navbar')
-
-    <div class="hero" role="region" aria-label="Profil SAMSAT">
-        <h1>Profil SAMSAT Tanjungpinang</h1>
-        <p class="top">
-            Samsat merupakan singkatan dari Sistem Administrasi Manunggal Satu Atap. Kantor ini membawahi tiga instansi di dalamnya. Instansi yang berada di dalam Samsat akan bertanggung jawab dengan lalu lintas, kendaraan, dan pemilik kendaraan tersebut.
-        </p>
-    </div>
-        </header>
-            <section class="section-definisi">
-                <div class="definisi-card">
-                    <h5>Tentang SAMSAT</h5>
-                    <p>Menurut Peraturan Presiden No 5 Tahun 2015 tentang Penyelenggaraan SAMSAT, SAMSAT sendiri merupakan sebuah rangkaian sistem yang bertujuan untuk menyelenggarakan tugas Bea Balik Nama Kendaraan Bermotor (BBNKB), registrasi serta identifikasi kendaraan bermotor, dan penagihan penerimaan pajak kendaraan bermotor dan biaya yang terkait.</p>
-                    <p>Kepemilikan kendaraan bermotor wajib melakukan registrasi dan identifikasi kendaraan bermotor, membayar pajak kendaraan bermotor, dan membayar Sumbangan Wajib Dana Kecelakaan Lalu Lintas dan Angkutan Jalan (SWDKLLJ).</p>
-                    <p>Registrasi dan identifikasi kendaraan bermotor dilakukan oleh Kepolisian Negara Republik Indonesia, pemungutan pajak kendaraan bermotor dan Bea Balik Nama Kendaraan Bermotor dilakukan oleh Pemerintah Daerah, dan pengelolaan SWDKLLJ dilakukan oleh PT Jasa Raharja (Persero) yang bertugas mengelola SWDKLLJ.</p>
-                </div>
-            </section>
-            <div class="definisi-card visi-box">
-            
+            <!-- Visi -->
+            <div class="content-card visi-box">
                 <h2>VISI</h2>
                 <p>
                     Terwujudnya Badan Pendapatan Daerah sebagai Organisasi yang Profesional, Transparan, dan Akuntabel dalam rangka Peningkatan Pendapatan Daerah
                 </p>
             </div>
-            <div class="definisi-card misi-box">
+
+            <!-- Misi -->
+            <div class="content-card misi-box">
                 <h2>MISI</h2>
                 <ol class="misi-list">
                     <li>Meningkatnya Profesionalisme Aparatur dalam Rangka Peningkatan Pendapatan Daerah.</li>
@@ -48,10 +55,10 @@
                 </ol>
             </div>
         </div>
-        </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </main>
 
     @include('footer')
 
-    </body>
-    </html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
